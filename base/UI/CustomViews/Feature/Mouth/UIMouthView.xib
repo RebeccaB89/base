@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UIMouthView">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAz-Lv-WCN">
+                    <rect key="frame" x="0.0" y="79" width="100" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="09A-AQ-kG2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-ha-rqN">
+                    <rect key="frame" x="25" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="8E3-Ed-ZMf"/>
+                        <constraint firstAttribute="height" constant="50" id="qE6-mg-1rn"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PEX-ha-rqN" firstAttribute="centerX" secondItem="nAz-Lv-WCN" secondAttribute="centerX" id="Oua-eA-0aG"/>
+                <constraint firstItem="nAz-Lv-WCN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X6F-ky-JhF"/>
+                <constraint firstItem="PEX-ha-rqN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="XUY-ZO-zbz"/>
+                <constraint firstAttribute="bottom" secondItem="nAz-Lv-WCN" secondAttribute="bottom" id="b2e-qU-bhc"/>
+                <constraint firstAttribute="trailing" secondItem="nAz-Lv-WCN" secondAttribute="trailing" id="ciC-bo-Kem"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_imageView" destination="PEX-ha-rqN" id="hgW-cT-5ay"/>
+                <outlet property="_nameLabel" destination="nAz-Lv-WCN" id="0Pm-do-Xff"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="295"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
