@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIMouthView.h"
 
-@interface UIMouthFeatureView : UIView <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface UIMouthFeatureView : UIView <UICollectionViewDataSource, UICollectionViewDelegate, UIMouthViewDelegate>
 {
     __weak IBOutlet UICollectionView *_mouthsCollectionView;
     

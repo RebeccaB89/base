@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MouthInfo.h"
 
+@class UIMouthView;
+
+@protocol UIMouthViewDelegate <NSObject>
+
+- (void)mouthView:(UIMouthView *)mouthView mouthInfoClicked:(MouthInfo *)mouthInfo;
+
+@end
+
 @interface UIMouthView : UIView
 {
     __weak IBOutlet UILabel *_nameLabel;
@@ -17,5 +25,9 @@
 }
 
 @property (nonatomic, strong) MouthInfo *mouthInfo;
+
+@property (nonatomic, weak) id<UIMouthViewDelegate> delegate;
+
+- (IBAction)mouthClicked:(UIButton *)sender;
 
 @end

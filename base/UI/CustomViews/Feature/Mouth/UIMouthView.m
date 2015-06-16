@@ -8,6 +8,12 @@
 
 #import "UIMouthView.h"
 
+@interface UIMouthView()
+
+- (void)notifyMouthInfoClicked:(MouthInfo *)mouthInfo;
+
+@end
+
 @implementation UIMouthView
 
 - (void)awakeFromNib
@@ -35,6 +41,19 @@
         _nameLabel.text = nil;
         _imageView.image = nil;
     }
+}
+
+- (void)notifyMouthInfoClicked:(MouthInfo *)mouthInfo
+{
+    if ([self.delegate respondsToSelector:@selector(mouthView:mouthInfoClicked:)])
+    {
+        [_delegate mouthView:self mouthInfoClicked:mouthInfo];
+    }
+}
+
+- (IBAction)mouthClicked:(UIButton *)sender
+{
+    [self notifyMouthInfoClicked:self.mouthInfo];
 }
 
 @end

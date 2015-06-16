@@ -306,6 +306,7 @@
 		4889751B1B00932800E63E90 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				489962201B301D900086AAE8 /* TemplateView */,
 				488A74081B15F1D70047876F /* Features */,
 				4815A5931B0B175800DF8C80 /* FeatureCell */,
 				48695A8A1B03513A003FA5E6 /* UIZoomableView.h */,
@@ -398,6 +399,13 @@
 				48D6E4111B1B67BB0058EE2C /* UIMouthView.xib */,
 			);
 			path = Mouth;
+			sourceTree = "<group>";
+		};
+		489962201B301D900086AAE8 /* TemplateView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TemplateView;
 			sourceTree = "<group>";
 		};
 		48D6E4131B1B6B050058EE2C /* Features */ = {
