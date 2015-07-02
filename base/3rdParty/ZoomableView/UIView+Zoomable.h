@@ -15,6 +15,7 @@
 - (CGSize)bigSize;
 - (BOOL)isSmall;
 - (void)onDoubleTap:(UITapGestureRecognizer *)sender;
+- (void)setZoomable:(BOOL)zoomable;
 
 @property (nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic) CGSize defaultSize;

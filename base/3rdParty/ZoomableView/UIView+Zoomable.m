@@ -70,6 +70,11 @@
     return NO;
 }
 
+- (void)setZoomable:(BOOL)zoomable
+{
+    [self.tapGestureRecognizer setEnabled:zoomable];
+}
+
 - (void)onDoubleTap:(UITapGestureRecognizer *)sender
 {
     CGSize newSize;

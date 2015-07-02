@@ -1,15 +1,20 @@
 //
-//  UIZoomableDraggableView.m
+//  UIZoomableView.m
 //  base
 //
-//  Created by Rebecca Biaz on 5/17/15.
+//  Created by Rebecca Biaz on 5/13/15.
 //  Copyright (c) 2015 rebecca. All rights reserved.
 //
 
-#import "UIZoomableDraggableView.h"
+#import "UIZoomableView.h"
+#import "UIView+Zoomable.h"
 
+@interface UIZoomableView()
+{
+}
+@end
 
-@implementation UIZoomableDraggableView
+@implementation UIZoomableView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -42,16 +47,8 @@
 
 - (void)initialize
 {
-    [self enableDragging];
-    [self setDraggable:YES];
-    self.cagingArea = [self areaCanDrag];
-    
     [self initializeZoomableView];
-}
-
-- (CGRect)areaCanDrag
-{
-    return [Shared appDelegate].window.bounds;
+    [self setZoomable:YES];
 }
 
 @end

@@ -12,4 +12,7 @@
 
 @interface UIZoomableDraggableView : UIView
 
+@property (nonatomic, unsafe_unretained) BOOL zoomableEnabled;
+@property (nonatomic, unsafe_unretained) BOOL draggableEnabled;
+
 @end

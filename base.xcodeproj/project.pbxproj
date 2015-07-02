@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		4815A5971B0B179D00DF8C80 /* UIFeatureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4815A5951B0B179D00DF8C80 /* UIFeatureTableViewCell.m */; };
 		4815A5981B0B179D00DF8C80 /* UIFeatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4815A5961B0B179D00DF8C80 /* UIFeatureTableViewCell.xib */; };
-		48695A8C1B03513A003FA5E6 /* UIZoomableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48695A8B1B03513A003FA5E6 /* UIZoomableView.m */; };
 		486988181B0227BB0081A0F9 /* Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 486988171B0227BB0081A0F9 /* Shared.m */; };
 		4869881B1B022ACF0081A0F9 /* NSObject-Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4869881A1B022ACF0081A0F9 /* NSObject-Utility.m */; };
-		487A5C581B038A5000FBF464 /* UIDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A5C571B038A5000FBF464 /* UIDraggableView.m */; };
 		487A5C611B038AB800FBF464 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 487A5C601B038AB800FBF464 /* UIView+draggable.m */; };
 		4882D4981B08FBFD004786A3 /* UIView+Zoomable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882D4971B08FBFD004786A3 /* UIView+Zoomable.m */; };
-		4882D49B1B08FC29004786A3 /* UIZoomableDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882D49A1B08FC29004786A3 /* UIZoomableDraggableView.m */; };
 		4882D49E1B09DE36004786A3 /* UITopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882D49D1B09DE36004786A3 /* UITopMenuView.m */; };
 		4882D4A01B09DE48004786A3 /* UITopMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4882D49F1B09DE48004786A3 /* UITopMenuView.xib */; };
 		4882D4A61B0A2299004786A3 /* UIMagnetBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4882D4A41B0A2299004786A3 /* UIMagnetBoardViewController.m */; };
@@ -53,6 +50,10 @@
 		488A74061B15EC550047876F /* arrow-up-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 488A74051B15EC550047876F /* arrow-up-icon.png */; };
 		488A740C1B15F2370047876F /* UIMouthFeatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488A740B1B15F2370047876F /* UIMouthFeatureView.m */; };
 		488A740E1B15F2450047876F /* UIMouthFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488A740D1B15F2450047876F /* UIMouthFeatureView.xib */; };
+		489962271B301E3C0086AAE8 /* UIDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 489962221B301E3C0086AAE8 /* UIDraggableView.m */; };
+		489962281B301E3C0086AAE8 /* UIZoomableDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 489962241B301E3C0086AAE8 /* UIZoomableDraggableView.m */; };
+		489962291B301E3C0086AAE8 /* UIZoomableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 489962261B301E3C0086AAE8 /* UIZoomableView.m */; };
+		4899622C1B30239C0086AAE8 /* UITemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4899622B1B30239C0086AAE8 /* UITemplateView.m */; };
 		48D6E4101B1B67A10058EE2C /* UIMouthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E40F1B1B67A10058EE2C /* UIMouthView.m */; };
 		48D6E4121B1B67BB0058EE2C /* UIMouthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D6E4111B1B67BB0058EE2C /* UIMouthView.xib */; };
 		48D6E4161B1B6B840058EE2C /* FeaturesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4151B1B6B840058EE2C /* FeaturesManager.m */; };
@@ -63,20 +64,14 @@
 		4815A5941B0B179D00DF8C80 /* UIFeatureTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFeatureTableViewCell.h; sourceTree = "<group>"; };
 		4815A5951B0B179D00DF8C80 /* UIFeatureTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFeatureTableViewCell.m; sourceTree = "<group>"; };
 		4815A5961B0B179D00DF8C80 /* UIFeatureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIFeatureTableViewCell.xib; sourceTree = "<group>"; };
-		48695A8A1B03513A003FA5E6 /* UIZoomableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIZoomableView.h; sourceTree = "<group>"; };
-		48695A8B1B03513A003FA5E6 /* UIZoomableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIZoomableView.m; sourceTree = "<group>"; };
 		486988161B0227BB0081A0F9 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		486988171B0227BB0081A0F9 /* Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shared.m; sourceTree = "<group>"; };
 		486988191B022ACF0081A0F9 /* NSObject-Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Utility.h"; sourceTree = "<group>"; };
 		4869881A1B022ACF0081A0F9 /* NSObject-Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-Utility.m"; sourceTree = "<group>"; };
-		487A5C561B038A5000FBF464 /* UIDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDraggableView.h; sourceTree = "<group>"; };
-		487A5C571B038A5000FBF464 /* UIDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDraggableView.m; sourceTree = "<group>"; };
 		487A5C5F1B038AB800FBF464 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+draggable.h"; sourceTree = "<group>"; };
 		487A5C601B038AB800FBF464 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+draggable.m"; sourceTree = "<group>"; };
 		4882D4961B08FBFD004786A3 /* UIView+Zoomable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Zoomable.h"; sourceTree = "<group>"; };
 		4882D4971B08FBFD004786A3 /* UIView+Zoomable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Zoomable.m"; sourceTree = "<group>"; };
-		4882D4991B08FC29004786A3 /* UIZoomableDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIZoomableDraggableView.h; sourceTree = "<group>"; };
-		4882D49A1B08FC29004786A3 /* UIZoomableDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIZoomableDraggableView.m; sourceTree = "<group>"; };
 		4882D49C1B09DE36004786A3 /* UITopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITopMenuView.h; sourceTree = "<group>"; };
 		4882D49D1B09DE36004786A3 /* UITopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITopMenuView.m; sourceTree = "<group>"; };
 		4882D49F1B09DE48004786A3 /* UITopMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITopMenuView.xib; sourceTree = "<group>"; };
@@ -129,6 +124,14 @@
 		488A740A1B15F2370047876F /* UIMouthFeatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMouthFeatureView.h; sourceTree = "<group>"; };
 		488A740B1B15F2370047876F /* UIMouthFeatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMouthFeatureView.m; sourceTree = "<group>"; };
 		488A740D1B15F2450047876F /* UIMouthFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMouthFeatureView.xib; sourceTree = "<group>"; };
+		489962211B301E3C0086AAE8 /* UIDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDraggableView.h; sourceTree = "<group>"; };
+		489962221B301E3C0086AAE8 /* UIDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDraggableView.m; sourceTree = "<group>"; };
+		489962231B301E3C0086AAE8 /* UIZoomableDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIZoomableDraggableView.h; sourceTree = "<group>"; };
+		489962241B301E3C0086AAE8 /* UIZoomableDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIZoomableDraggableView.m; sourceTree = "<group>"; };
+		489962251B301E3C0086AAE8 /* UIZoomableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIZoomableView.h; sourceTree = "<group>"; };
+		489962261B301E3C0086AAE8 /* UIZoomableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIZoomableView.m; sourceTree = "<group>"; };
+		4899622A1B30239C0086AAE8 /* UITemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITemplateView.h; sourceTree = "<group>"; };
+		4899622B1B30239C0086AAE8 /* UITemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITemplateView.m; sourceTree = "<group>"; };
 		48D6E40E1B1B67A10058EE2C /* UIMouthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMouthView.h; sourceTree = "<group>"; };
 		48D6E40F1B1B67A10058EE2C /* UIMouthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMouthView.m; sourceTree = "<group>"; };
 		48D6E4111B1B67BB0058EE2C /* UIMouthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMouthView.xib; sourceTree = "<group>"; };
@@ -309,12 +312,6 @@
 				489962201B301D900086AAE8 /* TemplateView */,
 				488A74081B15F1D70047876F /* Features */,
 				4815A5931B0B175800DF8C80 /* FeatureCell */,
-				48695A8A1B03513A003FA5E6 /* UIZoomableView.h */,
-				48695A8B1B03513A003FA5E6 /* UIZoomableView.m */,
-				487A5C561B038A5000FBF464 /* UIDraggableView.h */,
-				487A5C571B038A5000FBF464 /* UIDraggableView.m */,
-				4882D4991B08FC29004786A3 /* UIZoomableDraggableView.h */,
-				4882D49A1B08FC29004786A3 /* UIZoomableDraggableView.m */,
 				4882D49C1B09DE36004786A3 /* UITopMenuView.h */,
 				4882D49D1B09DE36004786A3 /* UITopMenuView.m */,
 				4882D49F1B09DE48004786A3 /* UITopMenuView.xib */,
@@ -404,6 +401,14 @@
 		489962201B301D900086AAE8 /* TemplateView */ = {
 			isa = PBXGroup;
 			children = (
+				489962211B301E3C0086AAE8 /* UIDraggableView.h */,
+				489962221B301E3C0086AAE8 /* UIDraggableView.m */,
+				489962231B301E3C0086AAE8 /* UIZoomableDraggableView.h */,
+				489962241B301E3C0086AAE8 /* UIZoomableDraggableView.m */,
+				489962251B301E3C0086AAE8 /* UIZoomableView.h */,
+				489962261B301E3C0086AAE8 /* UIZoomableView.m */,
+				4899622A1B30239C0086AAE8 /* UITemplateView.h */,
+				4899622B1B30239C0086AAE8 /* UITemplateView.m */,
 			);
 			path = TemplateView;
 			sourceTree = "<group>";
@@ -515,12 +520,14 @@
 				488974FB1B00928400E63E90 /* ViewController.m in Sources */,
 				488974F81B00928400E63E90 /* AppDelegate.m in Sources */,
 				4869881B1B022ACF0081A0F9 /* NSObject-Utility.m in Sources */,
+				489962291B301E3C0086AAE8 /* UIZoomableView.m in Sources */,
 				488975251B00944A00E63E90 /* UIView-Nib.m in Sources */,
+				489962281B301E3C0086AAE8 /* UIZoomableDraggableView.m in Sources */,
 				4889752A1B00C02500E63E90 /* viewLogic.m in Sources */,
 				48D6E4191B1B6C980058EE2C /* MouthInfo.m in Sources */,
-				4882D49B1B08FC29004786A3 /* UIZoomableDraggableView.m in Sources */,
 				488A740C1B15F2370047876F /* UIMouthFeatureView.m in Sources */,
 				4882D4AB1B0A261C004786A3 /* UIFeatureViewController.m in Sources */,
+				489962271B301E3C0086AAE8 /* UIDraggableView.m in Sources */,
 				488975241B00944A00E63E90 /* UIView-Additions.m in Sources */,
 				4882D4981B08FBFD004786A3 /* UIView+Zoomable.m in Sources */,
 				4882D4A61B0A2299004786A3 /* UIMagnetBoardViewController.m in Sources */,
@@ -531,9 +538,8 @@
 				48D6E4101B1B67A10058EE2C /* UIMouthView.m in Sources */,
 				4882D49E1B09DE36004786A3 /* UITopMenuView.m in Sources */,
 				488974F51B00928300E63E90 /* main.m in Sources */,
-				487A5C581B038A5000FBF464 /* UIDraggableView.m in Sources */,
+				4899622C1B30239C0086AAE8 /* UITemplateView.m in Sources */,
 				487A5C611B038AB800FBF464 /* UIView+draggable.m in Sources */,
-				48695A8C1B03513A003FA5E6 /* UIZoomableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
