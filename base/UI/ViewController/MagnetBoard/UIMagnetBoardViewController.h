@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "UITopMenuView.h"
+#import "UIFeatureViewController.h"
+#import "UITemplateView.h"
 
-@interface UIMagnetBoardViewController : UIViewController <UITopMenuViewDelegate>
+@interface UIMagnetBoardViewController : UIViewController <UIPopoverControllerDelegate, UITopMenuViewDelegate, UIFeatureViewControllerDelegate>
 {
     __weak IBOutlet UIView *_topMenuPlaceHolder;
     
@@ -17,6 +19,9 @@
     
     UITopMenuView *_topMenuView;
     UITapGestureRecognizer *_tapGesture;
+    UIPopoverController *_popover;
+    
+    UITemplateView *_chosenTemplateView;
 }
 
 @end

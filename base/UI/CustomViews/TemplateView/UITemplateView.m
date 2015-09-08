@@ -10,12 +10,30 @@
 
 @implementation UITemplateView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.layer.borderWidth = 2.0f;
 }
-*/
+
+- (void)setFeatureInfo:(FeatureInfo *)featureInfo
+{
+    _featureInfo = featureInfo;
+    [self layoutData];
+}
+
+- (void)layoutData
+{
+    if (self.featureInfo)
+    {
+        _imageView.image = IMAGE(_featureInfo.imagePath);
+    }
+    else
+    {
+        _imageView.image = nil;
+    }
+}
 
 @end

@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "FeatureInfo.h"
+#import "UIBaseFeaturesView.h"
 
-@interface UIFeatureViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@class UIFeatureViewController;
+
+@protocol UIFeatureViewControllerDelegate <NSObject>
+
+- (void)featureViewControlelr:(UIFeatureViewController *)featureViewController didSelectFeatureInfo:(FeatureInfo *)featureInfo;
+@end
+
+@interface UIFeatureViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIBaseFeaturesViewDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
     
@@ -17,5 +25,7 @@
     UIView *_subMenuView;
     NSIndexPath *_subMenuIndexPath;
 }
+
+@property (nonatomic, weak) id<UIFeatureViewControllerDelegate> delegate;
 
 @end

@@ -8,10 +8,12 @@
 
 #import "UIFeatureViewController.h"
 #import "UIFeatureTableViewCell.h"
-#import "UIMouthFeatureView.h"
 #import "FeaturesManager.h"
+#import "UIBaseFeaturesView.h"
 
 @interface UIFeatureViewController ()
+
+- (void)notifyFeatureInfoSelected:(FeatureInfo *)featureInfo;
 
 @end
 
@@ -37,9 +39,33 @@
     [_tableView reloadData];
 }
 
+- (UIBaseFeaturesView *)subMenuviewForFeatureInfo:(FeatureInfo *)featureInfo
+{
+    UIBaseFeaturesView *subMenu;
+    subMenu = [UIBaseFeaturesView loadFromNib];
+    subMenu.delegate = self;
+    
+    if ([featureInfo.title containsString:@"outh"])//mouth
+    {
+        subMenu.featureInfos = [[FeaturesManager sharedInstance] mouths];
+    }
+    else if ([featureInfo.title containsString:@"olor"])//color
+    {
+        subMenu.featureInfos = [[FeaturesManager sharedInstance] colors];
+    }
+    else
+    {
+        subMenu.featureInfos = [[FeaturesManager sharedInstance] mouths];
+    }
+    
+    return subMenu;
+}
+
 - (void)openSubMenu:(NSIndexPath *)indexPath animated:(BOOL)animated
 {
-    _subMenuView = [UIMouthFeatureView loadFromNib];
+    UIFeatureTableViewCell *cell = (UIFeatureTableViewCell *)[_tableView cellForRowAtIndexPath:indexPath];
+    
+    _subMenuView = [self subMenuviewForFeatureInfo:cell.featureInfo];
     
     [_tableView beginUpdates];
     NSIndexPath* changeRow = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:0];
@@ -96,6 +122,14 @@
     }
 }
 
+- (void)notifyFeatureInfoSelected:(FeatureInfo *)featureInfo
+{
+    if ([self.delegate respondsToSelector:@selector(featureViewControlelr:didSelectFeatureInfo:)])
+    {
+        [_delegate featureViewControlelr:self didSelectFeatureInfo:featureInfo];
+    }
+}
+
 /* UITableView Delegates */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -113,7 +147,14 @@
 {
     if (_subMenuView && _subMenuIndexPath.row == indexPath.row)
     {
-        return 300;
+        
+        if ([_subMenuView isKindOfClass:[UIBaseFeaturesView class]])
+        {
+            UIBaseFeaturesView *baseFeatureView = (UIBaseFeaturesView *)_subMenuView;
+            return [UIBaseFeaturesView sizeForNumOfItems:(int)[baseFeatureView.featureInfos count] withWidth:self.view.width].height;
+        }
+        else
+            return 70;
     }
     return 70;
 }
@@ -142,6 +183,7 @@
             standartCell.backgroundColor = [UIColor clearColor];
             
             [_subMenuView removeFromSuperview];
+            _subMenuView.frame = standartCell.contentView.bounds;
             [standartCell.contentView addSubview:_subMenuView];
             standartCell.selectionStyle = UITableViewCellSelectionStyleNone;
             return standartCell;
@@ -167,5 +209,14 @@
 }
 
 /* End UITableView Delegates */
+
+/* UIBaseFeaturesView Delegates */
+
+- (void)baseFeaturesView:(UIBaseFeaturesView *)baseFeaturesView didSelectFeatureInfo:(FeatureInfo *)featureInfo
+{
+    [self notifyFeatureInfoSelected:featureInfo];
+}
+
+/* End UIBaseFeaturesView Delegates */
 
 @end
