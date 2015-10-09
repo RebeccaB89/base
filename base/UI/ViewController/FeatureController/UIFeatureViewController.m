@@ -53,6 +53,18 @@
     {
         subMenu.featureInfos = [[FeaturesManager sharedInstance] colors];
     }
+    else if ([featureInfo.title containsString:@"wel"])//vowel
+    {
+        subMenu.featureInfos = [[FeaturesManager sharedInstance] vowels];
+    }
+    else if ([featureInfo.title containsString:@"yllable"])//syllable
+    {
+        subMenu.featureInfos = [[FeaturesManager sharedInstance] syllables];
+    }
+    else if ([featureInfo.title containsString:@"hroat"])//throat
+    {
+        subMenu.featureInfos = [[FeaturesManager sharedInstance] throat];
+    }
     else
     {
         subMenu.featureInfos = [[FeaturesManager sharedInstance] mouths];

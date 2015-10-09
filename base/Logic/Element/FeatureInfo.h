@@ -14,5 +14,9 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *imagePath;
+@property (nonatomic, unsafe_unretained) NSInteger factorRegex;
+
++ (NSString *)regex;
+- (NSString *)regex;
 
 @end

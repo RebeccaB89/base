@@ -103,6 +103,14 @@
     if (sender.state == UIGestureRecognizerStateBegan)
     {
         UIView *senderView = sender.view;
+        UIView *s = senderView.superview;
+        UIView *ss= s.superview;
+        if ([ss isKindOfClass:[UIMagnetView class]])
+        {
+            [UIMagnetView breakMagnetView:(UIMagnetView *)ss];
+            return;
+            
+        }
         CGPoint center = senderView.center;
         UIMagnetView *magnetView = [UIMagnetView magnetViewForSuperView:self.view removeFromSuperView:YES inPoint:sender.view.origin];
     }

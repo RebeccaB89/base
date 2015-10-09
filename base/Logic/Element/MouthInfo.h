@@ -8,11 +8,29 @@
 
 #import "FeatureInfo.h"
 
+typedef enum : NSUInteger
+{
+    mouthFeatureTypeStart,
+    mouthFeatureTypeMB = mouthFeatureTypeStart,
+    mouthFeatureTypeMN,
+    mouthFeatureTypeML,
+    mouthFeatureTypeMNS,
+    mouthFeatureTypeMCH,
+    mouthFeatureTypeMTH,
+    mouthFeatureTypeMV,
+    mouthFeatureTypeMS,
+    mouthFeatureTypeMK,
+    mouthFeatureTypeMT,
+    mouthFeatureTypeMTN,
+    mouthFeatureTypeMY,
+    mouthFeatureTypeStop
+} MouthFeatureType;
+
 @interface MouthInfo : FeatureInfo
 
++ (MouthInfo *)mouthInfoWithMouthFeatureType:(MouthFeatureType)mouthFeatureType;
 + (MouthInfo *)mouthInfoTitle:(NSString *)title andImagePath:(NSString *)imagePath;
-
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *imagePath;
++ (NSString *)titleForMouthFeatureType:(MouthFeatureType)mouthFeatureType;
++ (NSString *)imagePathForMouthFeatureType:(MouthFeatureType)mouthFeatureType;
 
 @end

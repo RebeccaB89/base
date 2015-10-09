@@ -84,6 +84,18 @@
 		B382774D1B5D3F8A0054DB9F /* UIFeatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38277491B5D3F8A0054DB9F /* UIFeatureView.m */; };
 		B382774E1B5D3F8A0054DB9F /* UIFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B382774A1B5D3F8A0054DB9F /* UIFeatureView.xib */; };
 		B38277501B5D48010054DB9F /* UITemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B382774F1B5D48010054DB9F /* UITemplateView.xib */; };
+		B397F9871B9EF2720077C05F /* GrammarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = B397F9861B9EF2720077C05F /* GrammarLogic.m */; };
+		B397F98A1B9F024D0077C05F /* VowelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B397F9891B9F024D0077C05F /* VowelInfo.m */; };
+		B397F98D1B9F032E0077C05F /* SyllableTimeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B397F98C1B9F032E0077C05F /* SyllableTimeInfo.m */; };
+		B397F9901B9F03A90077C05F /* ThroatInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B397F98F1B9F03A90077C05F /* ThroatInfo.m */; };
+		B397F9971BA00DEC0077C05F /* Shapes-01.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9921BA00DEC0077C05F /* Shapes-01.png */; };
+		B397F9981BA00DEC0077C05F /* Shapes-02.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9931BA00DEC0077C05F /* Shapes-02.png */; };
+		B397F9991BA00DEC0077C05F /* Shapes-03.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9941BA00DEC0077C05F /* Shapes-03.png */; };
+		B397F99A1BA00DEC0077C05F /* Shapes-04.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9951BA00DEC0077C05F /* Shapes-04.png */; };
+		B397F99B1BA00DEC0077C05F /* Shapes-06.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9961BA00DEC0077C05F /* Shapes-06.png */; };
+		B397F99F1BA00E210077C05F /* Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F99D1BA00E210077C05F /* Snake.png */; };
+		B397F9A01BA00E210077C05F /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F99E1BA00E210077C05F /* Sparkle.png */; };
+		B397F9A31BA00E420077C05F /* Throat.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9A21BA00E420077C05F /* Throat.png */; };
 		B3FFD10A1B5F6F8900216E5F /* UIMagnetView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FFD1091B5F6F8900216E5F /* UIMagnetView.m */; };
 		B3FFD10C1B5F6FC100216E5F /* UIMagnetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FFD10B1B5F6FC100216E5F /* UIMagnetView.xib */; };
 /* End PBXBuildFile section */
@@ -194,6 +206,22 @@
 		B38277491B5D3F8A0054DB9F /* UIFeatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFeatureView.m; sourceTree = "<group>"; };
 		B382774A1B5D3F8A0054DB9F /* UIFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIFeatureView.xib; sourceTree = "<group>"; };
 		B382774F1B5D48010054DB9F /* UITemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITemplateView.xib; sourceTree = "<group>"; };
+		B397F9851B9EF2720077C05F /* GrammarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrammarLogic.h; sourceTree = "<group>"; };
+		B397F9861B9EF2720077C05F /* GrammarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrammarLogic.m; sourceTree = "<group>"; };
+		B397F9881B9F024D0077C05F /* VowelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VowelInfo.h; sourceTree = "<group>"; };
+		B397F9891B9F024D0077C05F /* VowelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VowelInfo.m; sourceTree = "<group>"; };
+		B397F98B1B9F032E0077C05F /* SyllableTimeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyllableTimeInfo.h; sourceTree = "<group>"; };
+		B397F98C1B9F032E0077C05F /* SyllableTimeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyllableTimeInfo.m; sourceTree = "<group>"; };
+		B397F98E1B9F03A90077C05F /* ThroatInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThroatInfo.h; sourceTree = "<group>"; };
+		B397F98F1B9F03A90077C05F /* ThroatInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThroatInfo.m; sourceTree = "<group>"; };
+		B397F9921BA00DEC0077C05F /* Shapes-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shapes-01.png"; sourceTree = "<group>"; };
+		B397F9931BA00DEC0077C05F /* Shapes-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shapes-02.png"; sourceTree = "<group>"; };
+		B397F9941BA00DEC0077C05F /* Shapes-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shapes-03.png"; sourceTree = "<group>"; };
+		B397F9951BA00DEC0077C05F /* Shapes-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shapes-04.png"; sourceTree = "<group>"; };
+		B397F9961BA00DEC0077C05F /* Shapes-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shapes-06.png"; sourceTree = "<group>"; };
+		B397F99D1BA00E210077C05F /* Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snake.png; sourceTree = "<group>"; };
+		B397F99E1BA00E210077C05F /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		B397F9A21BA00E420077C05F /* Throat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Throat.png; sourceTree = "<group>"; };
 		B3FFD1081B5F6F8900216E5F /* UIMagnetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMagnetView.h; sourceTree = "<group>"; };
 		B3FFD1091B5F6F8900216E5F /* UIMagnetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMagnetView.m; sourceTree = "<group>"; };
 		B3FFD10B1B5F6FC100216E5F /* UIMagnetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMagnetView.xib; sourceTree = "<group>"; };
@@ -223,6 +251,9 @@
 		482AC5E21B15D87600EF2634 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B397F9A11BA00E290077C05F /* Throat */,
+				B397F99C1BA00E060077C05F /* SyllabeTyme */,
+				B397F9911BA00DD30077C05F /* Vowel */,
 				B38277051B5BCD330054DB9F /* Mouths */,
 				488A74021B15EC380047876F /* TableResources */,
 				488A73E11B15E3A00047876F /* Colors */,
@@ -288,6 +319,12 @@
 				48D6E4181B1B6C980058EE2C /* MouthInfo.m */,
 				B38277361B5BD56F0054DB9F /* ColorInfo.h */,
 				B38277371B5BD56F0054DB9F /* ColorInfo.m */,
+				B397F9881B9F024D0077C05F /* VowelInfo.h */,
+				B397F9891B9F024D0077C05F /* VowelInfo.m */,
+				B397F98B1B9F032E0077C05F /* SyllableTimeInfo.h */,
+				B397F98C1B9F032E0077C05F /* SyllableTimeInfo.m */,
+				B397F98E1B9F03A90077C05F /* ThroatInfo.h */,
+				B397F98F1B9F03A90077C05F /* ThroatInfo.m */,
 			);
 			path = Element;
 			sourceTree = "<group>";
@@ -341,6 +378,7 @@
 		488975181B0092EA00E63E90 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				B397F9841B9EF22A0077C05F /* Grammar */,
 				48D6E4131B1B6B050058EE2C /* Features */,
 				4882D4B01B0A2A93004786A3 /* Element */,
 				488975281B00C02400E63E90 /* viewLogic.h */,
@@ -518,6 +556,44 @@
 			path = BaseFeatureView;
 			sourceTree = "<group>";
 		};
+		B397F9841B9EF22A0077C05F /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				B397F9851B9EF2720077C05F /* GrammarLogic.h */,
+				B397F9861B9EF2720077C05F /* GrammarLogic.m */,
+			);
+			path = Grammar;
+			sourceTree = "<group>";
+		};
+		B397F9911BA00DD30077C05F /* Vowel */ = {
+			isa = PBXGroup;
+			children = (
+				B397F9921BA00DEC0077C05F /* Shapes-01.png */,
+				B397F9931BA00DEC0077C05F /* Shapes-02.png */,
+				B397F9941BA00DEC0077C05F /* Shapes-03.png */,
+				B397F9951BA00DEC0077C05F /* Shapes-04.png */,
+				B397F9961BA00DEC0077C05F /* Shapes-06.png */,
+			);
+			path = Vowel;
+			sourceTree = "<group>";
+		};
+		B397F99C1BA00E060077C05F /* SyllabeTyme */ = {
+			isa = PBXGroup;
+			children = (
+				B397F99D1BA00E210077C05F /* Snake.png */,
+				B397F99E1BA00E210077C05F /* Sparkle.png */,
+			);
+			path = SyllabeTyme;
+			sourceTree = "<group>";
+		};
+		B397F9A11BA00E290077C05F /* Throat */ = {
+			isa = PBXGroup;
+			children = (
+				B397F9A21BA00E420077C05F /* Throat.png */,
+			);
+			path = Throat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -579,6 +655,8 @@
 				488A73FF1B15E3C90047876F /* Colors-14.png in Resources */,
 				488A73FB1B15E3C90047876F /* Colors-10.png in Resources */,
 				B38277351B5BCE5A0054DB9F /* Mouth-20@2x.png in Resources */,
+				B397F9991BA00DEC0077C05F /* Shapes-03.png in Resources */,
+				B397F99A1BA00DEC0077C05F /* Shapes-04.png in Resources */,
 				B38277301B5BCE5A0054DB9F /* Mouth-19.png in Resources */,
 				B38277251B5BCE5A0054DB9F /* Mouth-08.png in Resources */,
 				B38277211B5BCE5A0054DB9F /* Mouth-04.png in Resources */,
@@ -587,10 +665,13 @@
 				B382772F1B5BCE5A0054DB9F /* Mouth-18.png in Resources */,
 				488A73FC1B15E3C90047876F /* Colors-11.png in Resources */,
 				488A73FA1B15E3C90047876F /* Colors-09.png in Resources */,
+				B397F99F1BA00E210077C05F /* Snake.png in Resources */,
 				488A73FE1B15E3C90047876F /* Colors-13.png in Resources */,
+				B397F9971BA00DEC0077C05F /* Shapes-01.png in Resources */,
 				B382774C1B5D3F8A0054DB9F /* UIBaseFeaturesView.xib in Resources */,
 				B382772A1B5BCE5A0054DB9F /* Mouth-18@2x.png in Resources */,
 				488A73F41B15E3C90047876F /* Colors-03.png in Resources */,
+				B397F9981BA00DEC0077C05F /* Shapes-02.png in Resources */,
 				B38277241B5BCE5A0054DB9F /* Mouth-07.png in Resources */,
 				4815A5981B0B179D00DF8C80 /* UIFeatureTableViewCell.xib in Resources */,
 				488A73F31B15E3C90047876F /* Colors-02.png in Resources */,
@@ -609,9 +690,11 @@
 				4882D4A71B0A2299004786A3 /* UIMagnetBoardViewController.xib in Resources */,
 				488A73F61B15E3C90047876F /* Colors-05.png in Resources */,
 				488975001B00928400E63E90 /* Images.xcassets in Resources */,
+				B397F9A01BA00E210077C05F /* Sparkle.png in Resources */,
 				B382771F1B5BCE5A0054DB9F /* Mouth-02.png in Resources */,
 				488A73F71B15E3C90047876F /* Colors-06.png in Resources */,
 				B382771E1B5BCE550054DB9F /* Mouth-01.png in Resources */,
+				B397F9A31BA00E420077C05F /* Throat.png in Resources */,
 				4882D4A01B09DE48004786A3 /* UITopMenuView.xib in Resources */,
 				B382772C1B5BCE5A0054DB9F /* Mouth-04@2x.png in Resources */,
 				B38277271B5BCE5A0054DB9F /* Mouth-02@2x.png in Resources */,
@@ -621,6 +704,7 @@
 				488A73F21B15E3C90047876F /* Colors-01.png in Resources */,
 				488A74011B15E3C90047876F /* Colors-16.png in Resources */,
 				B38277291B5BCE5A0054DB9F /* Mouth-07@2x.png in Resources */,
+				B397F99B1BA00DEC0077C05F /* Shapes-06.png in Resources */,
 				488A73F91B15E3C90047876F /* Colors-08.png in Resources */,
 				B38277261B5BCE5A0054DB9F /* Mouth-01@2x.png in Resources */,
 				B382774E1B5D3F8A0054DB9F /* UIFeatureView.xib in Resources */,
@@ -639,6 +723,7 @@
 			files = (
 				48D6E4161B1B6B840058EE2C /* FeaturesManager.m in Sources */,
 				488975261B00944A00E63E90 /* UIViewController-Nib.m in Sources */,
+				B397F9871B9EF2720077C05F /* GrammarLogic.m in Sources */,
 				488974FB1B00928400E63E90 /* ViewController.m in Sources */,
 				488974F81B00928400E63E90 /* AppDelegate.m in Sources */,
 				4869881B1B022ACF0081A0F9 /* NSObject-Utility.m in Sources */,
@@ -652,9 +737,12 @@
 				488975241B00944A00E63E90 /* UIView-Additions.m in Sources */,
 				4882D4981B08FBFD004786A3 /* UIView+Zoomable.m in Sources */,
 				4882D4A61B0A2299004786A3 /* UIMagnetBoardViewController.m in Sources */,
+				B397F98D1B9F032E0077C05F /* SyllableTimeInfo.m in Sources */,
 				486988181B0227BB0081A0F9 /* Shared.m in Sources */,
+				B397F9901B9F03A90077C05F /* ThroatInfo.m in Sources */,
 				B38277381B5BD56F0054DB9F /* ColorInfo.m in Sources */,
 				4815A5971B0B179D00DF8C80 /* UIFeatureTableViewCell.m in Sources */,
+				B397F98A1B9F024D0077C05F /* VowelInfo.m in Sources */,
 				B382774B1B5D3F8A0054DB9F /* UIBaseFeaturesView.m in Sources */,
 				4882D4B61B0A2BA8004786A3 /* FeatureInfo.m in Sources */,
 				4882D4B31B0A2AC2004786A3 /* Element.m in Sources */,

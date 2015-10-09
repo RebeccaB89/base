@@ -7,6 +7,8 @@
 //
 
 #import "UIMagnetView.h"
+#import "UIZoomableView.h"
+#import "UIZoomableDraggableView.h"
 
 @implementation UIMagnetView
 
@@ -43,10 +45,11 @@
             [UIView animateWithDuration:0.3 animations:^{
                 subview.frame = goodMagnet.bounds;
             }];
-//            subview.frame = goodMagnet.bounds;
 
             UIDraggableView *draggableView = (UIDraggableView *)subview;
             [draggableView setDraggable:NO];
+            UIZoomableView *zoomableView = (UIZoomableView *)subview;
+            [zoomableView setZoomable:NO];
             [goodMagnet addSubview:subview];
             [viewToRemove addObject:subview];
         }
@@ -60,6 +63,58 @@
     return magnetView;
 }
 
++ (void)breakMagnetView:(UIMagnetView *)magnetView
+{
+    NSMutableArray *viewsToRemove = [NSMutableArray array];
+    for (UIView *placeHolder in magnetView.subviews)
+    {
+        UIView *subview = placeHolder.subviews.firstObject;
+        
+        UIDraggableView *draggableView = (UIDraggableView *)subview;
+        [draggableView setDraggable:YES];
+        UIZoomableView *zoomableView = (UIZoomableView *)subview;
+        [zoomableView setZoomable:YES];
+
+        if ([zoomableView isKindOfClass:[UIZoomableView class]] || [zoomableView isKindOfClass:[UIZoomableDraggableView class]] )
+        {
+            CGRect subviewFrame =  [magnetView convertRect:placeHolder.frame toView:magnetView.superview];
+            
+            subview.frame = subviewFrame;
+            if (CGRectEqualToRect(placeHolder.frame,magnetView.colorView.frame))
+            {
+                subviewFrame.origin.y -= 20;
+                subviewFrame.origin.x += 20;
+            }
+            
+            if (CGRectEqualToRect(placeHolder.frame,magnetView.accesoryView.frame))
+            {
+                subviewFrame.origin.y -= 20;
+                subviewFrame.origin.x -= 20;
+            }
+            
+            if (CGRectEqualToRect(placeHolder.frame,magnetView.soundView.frame))
+            {
+                subviewFrame.origin.y += 20;
+            }
+            
+            [UIView animateWithDuration:0.3 animations:^{
+                subview.frame = subviewFrame;
+            }];
+        }
+        
+        if (subview)
+        {
+            [viewsToRemove addObject:subview];
+        }
+    }
+    
+    for (UIView *v in viewsToRemove)
+    {
+        [v removeFromSuperview];
+        [magnetView.superview addSubview:v];
+    }
+}
+
 - (BOOL)view:(UIView *)view isInsidePlaceHolder:(UIView *)placeHolder
 {
     CGRect intersection = CGRectIntersection(view.frame, placeHolder.frame);
@@ -69,6 +124,26 @@
         return YES;
     }
     return NO;
+}
+
+- (UIView *)mainView
+{
+    return _mainView;
+}
+
+- (UIView *)colorView
+{
+    return _colorView;
+}
+
+- (UIView *)soundView
+{
+    return _soundView;
+}
+
+- (UIView *)accesoryView
+{
+    return _accesoryView;
 }
 
 //Width and Height of both rects may be different

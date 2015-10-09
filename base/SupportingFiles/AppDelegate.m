@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "viewLogic.h"
 #import "FeaturesManager.h"
+#import "GrammarLogic.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,8 @@
     [[viewLogic sharedInstance] applicationLaunched];
     [[FeaturesManager sharedInstance] applicationLaunched];
     
+    NSString *word = [[GrammarLogic sharedInstance] regexForFeatureInfos: [NSArray arrayWithObjects:[ColorInfo colorInfoWithColorFeatureType:colorFeatureTypeBlue], [MouthInfo mouthInfoWithMouthFeatureType:mouthFeatureTypeMB], nil]];
+    [[GrammarLogic sharedInstance] wordHavePermission:word];
     return YES;
 }
 

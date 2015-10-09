@@ -20,6 +20,12 @@
 }
 
 + (UIMagnetView *)magnetViewForSuperView:(UIView *)superView removeFromSuperView:(BOOL)removeFromSuperView inPoint:(CGPoint)point;
++ (void)breakMagnetView:(UIMagnetView *)magnetView;
 + (CGFloat)percentOfIntersectionWithRect:(CGRect)rect1 withRect2:(CGRect)rect2;
+
+- (UIView *)mainView;
+- (UIView *)colorView;
+- (UIView *)soundView;
+- (UIView *)accesoryView;
 
 @end

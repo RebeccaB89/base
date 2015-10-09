@@ -15,8 +15,19 @@
     FeatureInfo *featureInfo = [[FeatureInfo alloc] init];
     featureInfo.title = title;
     featureInfo.imagePath = imagePath;
-    
+    featureInfo.factorRegex = 0;
+
     return featureInfo;
+}
+
++ (NSString *)regex
+{
+    return [[[[self class] alloc] init] regex];
+}
+
+- (NSString *)regex
+{
+    return @"";
 }
 
 @end

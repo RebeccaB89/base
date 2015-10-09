@@ -10,12 +10,18 @@
 #import "FeatureInfo.h"
 #import "MouthInfo.h"
 #import "ColorInfo.h"
+#import "VowelInfo.h"
+#import "SyllableTimeInfo.h"
+#import "ThroatInfo.h"
 
 @interface FeaturesManager : NSObject
 {
     NSMutableArray *_features;
     NSMutableArray *_mouths;
     NSMutableArray *_colors;
+    NSMutableArray *_vowels;
+    NSMutableArray *_syllables;
+    NSMutableArray *_throat;
 }
 
 + (FeaturesManager *)sharedInstance;
@@ -25,5 +31,8 @@
 - (NSArray *)features;
 - (NSArray *)mouths;
 - (NSArray *)colors;
+- (NSArray *)vowels;
+- (NSArray *)syllables;
+- (NSArray *)throat;
 
 @end
