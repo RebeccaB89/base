@@ -55,6 +55,14 @@
         }
     }
     
+    for (UIView *subview in magnetView.subviews)
+    {
+        if (!subview.subviews.count)
+        {
+            subview.hidden = YES;
+        }
+    }
+    
 //    for (UIView *subToRemove in viewToRemove)
 //    {
 //        //[subToRemove removeFromSuperview];
@@ -80,21 +88,30 @@
             CGRect subviewFrame =  [magnetView convertRect:placeHolder.frame toView:magnetView.superview];
             
             subview.frame = subviewFrame;
-            if (CGRectEqualToRect(placeHolder.frame,magnetView.colorView.frame))
+            if (subview.superview == magnetView.throatView)
             {
-                subviewFrame.origin.y -= 20;
-                subviewFrame.origin.x += 20;
+                subviewFrame.origin.x += 100;
+            }
+            if (subview.superview == magnetView.vowelView)
+            {
+                subviewFrame.origin.x -= 100;
+            }
+
+            if (subview.superview == magnetView.colorView)
+            {
+                subviewFrame.origin.y -= 30;
+                subviewFrame.origin.x += 30;
             }
             
-            if (CGRectEqualToRect(placeHolder.frame,magnetView.accesoryView.frame))
+            if (subview.superview == magnetView.accesoryView)
             {
-                subviewFrame.origin.y -= 20;
-                subviewFrame.origin.x -= 20;
+                subviewFrame.origin.y -= 30;
+                subviewFrame.origin.x -= 30;
             }
             
-            if (CGRectEqualToRect(placeHolder.frame,magnetView.soundView.frame))
+            if (subview.superview == magnetView.soundView)
             {
-                subviewFrame.origin.y += 20;
+                subviewFrame.origin.y += 30;
             }
             
             [UIView animateWithDuration:0.3 animations:^{
@@ -113,6 +130,8 @@
         [v removeFromSuperview];
         [magnetView.superview addSubview:v];
     }
+    
+    [magnetView removeFromSuperview];
 }
 
 - (BOOL)view:(UIView *)view isInsidePlaceHolder:(UIView *)placeHolder
@@ -129,6 +148,16 @@
 - (UIView *)mainView
 {
     return _mainView;
+}
+
+- (UIView *)throatView
+{
+    return _throatView;
+}
+
+- (UIView *)vowelView
+{
+    return _vowelView;
 }
 
 - (UIView *)colorView

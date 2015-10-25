@@ -12,7 +12,9 @@
 
 + (ColorInfo *)colorInfoWithColorFeatureType:(ColorFeatureType)colorFeatureType
 {
-    return [ColorInfo colorInfoTitle:[ColorInfo titleForColorFeatureType:colorFeatureType] andImagePath:[ColorInfo imagePathForColorFeatureType:colorFeatureType]];
+    ColorInfo *info = [ColorInfo colorInfoTitle:[ColorInfo titleForColorFeatureType:colorFeatureType] andImagePath:[ColorInfo imagePathForColorFeatureType:colorFeatureType]];
+    info.featureInfoType = colorFeatureType;
+    return info;
 }
 
 + (ColorInfo *)colorInfoTitle:(NSString *)title andImagePath:(NSString *)imagePath
@@ -95,5 +97,25 @@
 {
     return @"Color";
 }
+
+- (NSInteger)factorOrderView
+{
+    return 5;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [super encodeWithCoder:aCoder];
+}
+
 
 @end

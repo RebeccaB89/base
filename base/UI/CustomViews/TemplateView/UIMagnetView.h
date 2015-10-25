@@ -12,6 +12,10 @@
 {
     __weak IBOutlet UIView *_mainView;
     
+    __weak IBOutlet UIView *_throatView;
+    
+    __weak IBOutlet UIView *_vowelView;
+    
     __weak IBOutlet UIView *_accesoryView;
     
     __weak IBOutlet UIView *_colorView;
@@ -24,6 +28,8 @@
 + (CGFloat)percentOfIntersectionWithRect:(CGRect)rect1 withRect2:(CGRect)rect2;
 
 - (UIView *)mainView;
+- (UIView *)throatView;
+- (UIView *)vowelView;
 - (UIView *)colorView;
 - (UIView *)soundView;
 - (UIView *)accesoryView;

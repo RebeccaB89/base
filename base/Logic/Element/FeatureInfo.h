@@ -15,8 +15,10 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *imagePath;
 @property (nonatomic, unsafe_unretained) NSInteger factorRegex;
+@property (nonatomic, unsafe_unretained) NSInteger featureInfoType;
 
 + (NSString *)regex;
 - (NSString *)regex;
+- (NSInteger)factorOrderView;
 
 @end

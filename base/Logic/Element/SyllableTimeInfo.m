@@ -12,7 +12,10 @@
 
 + (SyllableTimeInfo *)syllableTimeInfoWithSyllableFeatureType:(SyllableTimeFeatureType)syllableTimeFeatureType
 {
-    return [SyllableTimeInfo syllableTimeInfoTitle:[SyllableTimeInfo titleForSyllableFeatureType:syllableTimeFeatureType] andImagePath:[SyllableTimeInfo imagePathForSyllableFeatureType:syllableTimeFeatureType]];
+    SyllableTimeInfo *info = [SyllableTimeInfo syllableTimeInfoTitle:[SyllableTimeInfo titleForSyllableFeatureType:syllableTimeFeatureType] andImagePath:[SyllableTimeInfo imagePathForSyllableFeatureType:syllableTimeFeatureType]];
+    
+    info.featureInfoType = syllableTimeFeatureType;
+    return info;
 }
 
 + (SyllableTimeInfo *)syllableTimeInfoTitle:(NSString *)title andImagePath:(NSString *)imagePath
@@ -58,6 +61,11 @@
 - (NSString *)regex
 {
     return @"TimeSyllable";
+}
+
+- (NSInteger)factorOrderView
+{
+    return 1;
 }
 
 @end

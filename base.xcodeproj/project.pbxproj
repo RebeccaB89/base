@@ -54,6 +54,13 @@
 		4899622C1B30239C0086AAE8 /* UITemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4899622B1B30239C0086AAE8 /* UITemplateView.m */; };
 		48D6E4161B1B6B840058EE2C /* FeaturesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4151B1B6B840058EE2C /* FeaturesManager.m */; };
 		48D6E4191B1B6C980058EE2C /* MouthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D6E4181B1B6C980058EE2C /* MouthInfo.m */; };
+		B31F36A71BCE5DD2004BFBAC /* UIDictionnaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31F36A51BCE5DD2004BFBAC /* UIDictionnaryViewController.m */; };
+		B31F36A81BCE5DD2004BFBAC /* UIDictionnaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31F36A61BCE5DD2004BFBAC /* UIDictionnaryViewController.xib */; };
+		B31F36AD1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31F36AB1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.m */; };
+		B31F36AE1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31F36AC1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.xib */; };
+		B31F36B21BCE5EDA004BFBAC /* DictionnaryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B31F36B11BCE5EDA004BFBAC /* DictionnaryManager.m */; };
+		B31F36B51BCE5F43004BFBAC /* WordInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B31F36B41BCE5F43004BFBAC /* WordInfo.m */; };
+		B32849281BD7D24900A945C2 /* BaseSerializeData.m in Sources */ = {isa = PBXBuildFile; fileRef = B32849271BD7D24900A945C2 /* BaseSerializeData.m */; };
 		B382771E1B5BCE550054DB9F /* Mouth-01.png in Resources */ = {isa = PBXBuildFile; fileRef = B38277061B5BCE550054DB9F /* Mouth-01.png */; };
 		B382771F1B5BCE5A0054DB9F /* Mouth-02.png in Resources */ = {isa = PBXBuildFile; fileRef = B38277071B5BCE550054DB9F /* Mouth-02.png */; };
 		B38277201B5BCE5A0054DB9F /* Mouth-03.png in Resources */ = {isa = PBXBuildFile; fileRef = B38277081B5BCE550054DB9F /* Mouth-03.png */; };
@@ -173,6 +180,18 @@
 		48D6E4151B1B6B840058EE2C /* FeaturesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturesManager.m; sourceTree = "<group>"; };
 		48D6E4171B1B6C980058EE2C /* MouthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouthInfo.h; sourceTree = "<group>"; };
 		48D6E4181B1B6C980058EE2C /* MouthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouthInfo.m; sourceTree = "<group>"; };
+		B31F36A41BCE5DD2004BFBAC /* UIDictionnaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDictionnaryViewController.h; sourceTree = "<group>"; };
+		B31F36A51BCE5DD2004BFBAC /* UIDictionnaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDictionnaryViewController.m; sourceTree = "<group>"; };
+		B31F36A61BCE5DD2004BFBAC /* UIDictionnaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIDictionnaryViewController.xib; sourceTree = "<group>"; };
+		B31F36AA1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDictionnaryTableViewCell.h; sourceTree = "<group>"; };
+		B31F36AB1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDictionnaryTableViewCell.m; sourceTree = "<group>"; };
+		B31F36AC1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIDictionnaryTableViewCell.xib; sourceTree = "<group>"; };
+		B31F36B01BCE5EDA004BFBAC /* DictionnaryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionnaryManager.h; sourceTree = "<group>"; };
+		B31F36B11BCE5EDA004BFBAC /* DictionnaryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionnaryManager.m; sourceTree = "<group>"; };
+		B31F36B31BCE5F43004BFBAC /* WordInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordInfo.h; sourceTree = "<group>"; };
+		B31F36B41BCE5F43004BFBAC /* WordInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordInfo.m; sourceTree = "<group>"; };
+		B32849261BD7D24900A945C2 /* BaseSerializeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSerializeData.h; sourceTree = "<group>"; };
+		B32849271BD7D24900A945C2 /* BaseSerializeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSerializeData.m; sourceTree = "<group>"; };
 		B38277061B5BCE550054DB9F /* Mouth-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mouth-01.png"; sourceTree = "<group>"; };
 		B38277071B5BCE550054DB9F /* Mouth-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mouth-02.png"; sourceTree = "<group>"; };
 		B38277081B5BCE550054DB9F /* Mouth-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mouth-03.png"; sourceTree = "<group>"; };
@@ -325,6 +344,8 @@
 				B397F98C1B9F032E0077C05F /* SyllableTimeInfo.m */,
 				B397F98E1B9F03A90077C05F /* ThroatInfo.h */,
 				B397F98F1B9F03A90077C05F /* ThroatInfo.m */,
+				B31F36B31BCE5F43004BFBAC /* WordInfo.h */,
+				B31F36B41BCE5F43004BFBAC /* WordInfo.m */,
 			);
 			path = Element;
 			sourceTree = "<group>";
@@ -378,6 +399,7 @@
 		488975181B0092EA00E63E90 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				B31F36AF1BCE5EB6004BFBAC /* Dictionnary */,
 				B397F9841B9EF22A0077C05F /* Grammar */,
 				48D6E4131B1B6B050058EE2C /* Features */,
 				4882D4B01B0A2A93004786A3 /* Element */,
@@ -399,6 +421,7 @@
 		4889751A1B00931100E63E90 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B31F36A31BCE4D72004BFBAC /* Dictionnary */,
 				4882D4A21B0A225C004786A3 /* FeatureController */,
 				4882D4A11B0A2244004786A3 /* MagnetBoard */,
 			);
@@ -408,6 +431,7 @@
 		4889751B1B00932800E63E90 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B31F36A91BCE5E17004BFBAC /* Dictionnary */,
 				489962201B301D900086AAE8 /* TemplateView */,
 				488A74081B15F1D70047876F /* Features */,
 				4815A5931B0B175800DF8C80 /* FeatureCell */,
@@ -421,6 +445,7 @@
 		4889751C1B00940F00E63E90 /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
+				B32849251BD7D22F00A945C2 /* serialize */,
 				4882D4951B08FBDB004786A3 /* ZoomableView */,
 				487A5C5B1B038A7E00FBF464 /* DraggableView */,
 				4889751D1B00942D00E63E90 /* Category */,
@@ -510,6 +535,44 @@
 				48D6E4151B1B6B840058EE2C /* FeaturesManager.m */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		B31F36A31BCE4D72004BFBAC /* Dictionnary */ = {
+			isa = PBXGroup;
+			children = (
+				B31F36A41BCE5DD2004BFBAC /* UIDictionnaryViewController.h */,
+				B31F36A51BCE5DD2004BFBAC /* UIDictionnaryViewController.m */,
+				B31F36A61BCE5DD2004BFBAC /* UIDictionnaryViewController.xib */,
+			);
+			path = Dictionnary;
+			sourceTree = "<group>";
+		};
+		B31F36A91BCE5E17004BFBAC /* Dictionnary */ = {
+			isa = PBXGroup;
+			children = (
+				B31F36AA1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.h */,
+				B31F36AB1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.m */,
+				B31F36AC1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.xib */,
+			);
+			path = Dictionnary;
+			sourceTree = "<group>";
+		};
+		B31F36AF1BCE5EB6004BFBAC /* Dictionnary */ = {
+			isa = PBXGroup;
+			children = (
+				B31F36B01BCE5EDA004BFBAC /* DictionnaryManager.h */,
+				B31F36B11BCE5EDA004BFBAC /* DictionnaryManager.m */,
+			);
+			path = Dictionnary;
+			sourceTree = "<group>";
+		};
+		B32849251BD7D22F00A945C2 /* serialize */ = {
+			isa = PBXGroup;
+			children = (
+				B32849261BD7D24900A945C2 /* BaseSerializeData.h */,
+				B32849271BD7D24900A945C2 /* BaseSerializeData.m */,
+			);
+			path = serialize;
 			sourceTree = "<group>";
 		};
 		B38277051B5BCD330054DB9F /* Mouths */ = {
@@ -663,6 +726,7 @@
 				B38277221B5BCE5A0054DB9F /* Mouth-16.png in Resources */,
 				B38277311B5BCE5A0054DB9F /* Mouth-20.png in Resources */,
 				B382772F1B5BCE5A0054DB9F /* Mouth-18.png in Resources */,
+				B31F36AE1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.xib in Resources */,
 				488A73FC1B15E3C90047876F /* Colors-11.png in Resources */,
 				488A73FA1B15E3C90047876F /* Colors-09.png in Resources */,
 				B397F99F1BA00E210077C05F /* Snake.png in Resources */,
@@ -696,6 +760,7 @@
 				B382771E1B5BCE550054DB9F /* Mouth-01.png in Resources */,
 				B397F9A31BA00E420077C05F /* Throat.png in Resources */,
 				4882D4A01B09DE48004786A3 /* UITopMenuView.xib in Resources */,
+				B31F36A81BCE5DD2004BFBAC /* UIDictionnaryViewController.xib in Resources */,
 				B382772C1B5BCE5A0054DB9F /* Mouth-04@2x.png in Resources */,
 				B38277271B5BCE5A0054DB9F /* Mouth-02@2x.png in Resources */,
 				B38277341B5BCE5A0054DB9F /* Mouth-17@2x.png in Resources */,
@@ -740,12 +805,17 @@
 				B397F98D1B9F032E0077C05F /* SyllableTimeInfo.m in Sources */,
 				486988181B0227BB0081A0F9 /* Shared.m in Sources */,
 				B397F9901B9F03A90077C05F /* ThroatInfo.m in Sources */,
+				B32849281BD7D24900A945C2 /* BaseSerializeData.m in Sources */,
 				B38277381B5BD56F0054DB9F /* ColorInfo.m in Sources */,
 				4815A5971B0B179D00DF8C80 /* UIFeatureTableViewCell.m in Sources */,
 				B397F98A1B9F024D0077C05F /* VowelInfo.m in Sources */,
+				B31F36B51BCE5F43004BFBAC /* WordInfo.m in Sources */,
 				B382774B1B5D3F8A0054DB9F /* UIBaseFeaturesView.m in Sources */,
 				4882D4B61B0A2BA8004786A3 /* FeatureInfo.m in Sources */,
+				B31F36B21BCE5EDA004BFBAC /* DictionnaryManager.m in Sources */,
+				B31F36AD1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.m in Sources */,
 				4882D4B31B0A2AC2004786A3 /* Element.m in Sources */,
+				B31F36A71BCE5DD2004BFBAC /* UIDictionnaryViewController.m in Sources */,
 				4882D49E1B09DE36004786A3 /* UITopMenuView.m in Sources */,
 				488974F51B00928300E63E90 /* main.m in Sources */,
 				4899622C1B30239C0086AAE8 /* UITemplateView.m in Sources */,

@@ -12,7 +12,10 @@
 
 + (ThroatInfo *)throatInfoWithThroatFeatureType:(ThroatFeatureType)throatFeatureType
 {
-    return [ThroatInfo throatInfoTitle:[ThroatInfo titleForThroatFeatureType:throatFeatureType] andImagePath:[ThroatInfo imagePathForThroatFeatureType:throatFeatureType]];
+    ThroatInfo *info = [ThroatInfo throatInfoTitle:[ThroatInfo titleForThroatFeatureType:throatFeatureType] andImagePath:[ThroatInfo imagePathForThroatFeatureType:throatFeatureType]];
+
+    info.featureInfoType = throatFeatureType;
+    return info;
 }
 
 + (ThroatInfo *)throatInfoTitle:(NSString *)title andImagePath:(NSString *)imagePath
@@ -52,6 +55,11 @@
 - (NSString *)regex
 {
     return @"Throat";
+}
+
+- (NSInteger)factorOrderView
+{
+    return 4;
 }
 
 @end

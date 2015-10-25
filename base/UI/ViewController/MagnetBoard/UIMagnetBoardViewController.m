@@ -48,6 +48,18 @@
     [_topMenuPlaceHolder addSubview:_topMenuView];
 }
 
+- (void)updateViewArchitecture
+{
+    NSMutableArray *subviewsSorted = [self.view.subviews mutableCopy];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"tag" ascending:YES];
+    [subviewsSorted sortUsingDescriptors:@[sort]];
+    
+    for (UIView *subView in subviewsSorted)
+    {
+        [self.view sendSubviewToBack:subView];
+    }
+}
+
 - (void)addTapGesture
 {
     if (!_tapGesture)
@@ -108,10 +120,9 @@
         if ([ss isKindOfClass:[UIMagnetView class]])
         {
             [UIMagnetView breakMagnetView:(UIMagnetView *)ss];
+            [self updateViewArchitecture];
             return;
-            
         }
-        CGPoint center = senderView.center;
         UIMagnetView *magnetView = [UIMagnetView magnetViewForSuperView:self.view removeFromSuperView:YES inPoint:sender.view.origin];
     }
 //    UIView *senderView = sender.view;
@@ -142,6 +153,7 @@
     
     _chosenTemplateView.backgroundColor = [UIColor clearColor];
     _chosenTemplateView.featureInfo = featureInfo;
+    _chosenTemplateView.tag = featureInfo.factorOrderView;
     
     UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidLongClicked:)];
     [_chosenTemplateView addGestureRecognizer:longGesture];
@@ -149,6 +161,7 @@
     [self.view addSubview:_chosenTemplateView];
     [self.view sendSubviewToBack:_chosenTemplateView];
     [self updateTapGesture];
+    [self updateViewArchitecture];
 }
 
 /* End UIFeatureViewController Delegates */

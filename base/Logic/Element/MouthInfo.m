@@ -12,7 +12,10 @@
 
 + (MouthInfo *)mouthInfoWithMouthFeatureType:(MouthFeatureType)mouthFeatureType
 {
-    return [MouthInfo mouthInfoTitle:[MouthInfo titleForMouthFeatureType:mouthFeatureType] andImagePath:[MouthInfo imagePathForMouthFeatureType:mouthFeatureType]];
+    MouthInfo *info = [MouthInfo mouthInfoTitle:[MouthInfo titleForMouthFeatureType:mouthFeatureType] andImagePath:[MouthInfo imagePathForMouthFeatureType:mouthFeatureType]];
+    info.featureInfoType = mouthFeatureType;
+    
+    return info;
 }
 
 + (MouthInfo *)mouthInfoTitle:(NSString *)title andImagePath:(NSString *)imagePath
@@ -119,5 +122,25 @@
 {
     return @"Mouth";
 }
+
+- (NSInteger)factorOrderView
+{
+    return 2;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [super encodeWithCoder:aCoder];
+}
+
 
 @end

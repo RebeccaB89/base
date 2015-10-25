@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466089827.51197"
+            timestampString = "466504613.267564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-viewDidLongClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,27 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466089827.51197"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "-featureViewControlelr:didSelectFeatureInfo:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466089827.51197"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-viewDidLongClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466089827.51197"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-viewDidLongClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466089827.51197"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-viewDidLongClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466085787.256629"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "-viewDidLongClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
-            timestampString = "466085815.400992"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-viewDidLongClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -265,13 +249,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "base/UI/CustomViews/TemplateView/UIMagnetView.m"
-            timestampString = "466091100.815014"
+            filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "+breakMagnetView:"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-showHideTopMenu:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -281,13 +265,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "base/UI/CustomViews/TemplateView/UIMagnetView.m"
-            timestampString = "466091100.815014"
+            filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
+            timestampString = "466502249.115795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "+breakMagnetView:"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-updateViewArchitecture"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -297,13 +281,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "base/UI/CustomViews/TemplateView/UIMagnetView.m"
-            timestampString = "466090865.619773"
+            filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
+            timestampString = "466502119.690954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "+magnetViewForSuperView:removeFromSuperView:inPoint:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-updateViewArchitecture"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -313,62 +297,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "base/UI/CustomViews/TemplateView/UIMagnetView.m"
-            timestampString = "466090867.233635"
+            filePath = "base/UI/ViewController/MagnetBoard/UIMagnetBoardViewController.m"
+            timestampString = "466502243.512835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "+magnetViewForSuperView:removeFromSuperView:inPoint:"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-updateViewArchitecture"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "base/UI/CustomViews/TemplateView/UIMagnetView.m"
-            timestampString = "466091233.732649"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "+breakMagnetView:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[UIMagnetView breakMagnetView:]"
-                  moduleName = "base"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rebecca/Documents/Projects/rebecca/SSCProject/base/base/UI/CustomViews/TemplateView/UIMagnetView.m"
-                  timestampString = "466091044.808047"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "1439">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32+[UIMagnetView breakMagnetView:]_block_invoke"
-                  moduleName = "base"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rebecca/Documents/Projects/rebecca/SSCProject/base/base/UI/CustomViews/TemplateView/UIMagnetView.m"
-                  timestampString = "466091044.808259"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

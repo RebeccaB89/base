@@ -12,7 +12,10 @@
 
 + (VowelInfo *)vowelInfoWithVowelFeatureType:(VowelFeatureType)vowelFeatureType
 {
-    return [VowelInfo vowelInfoTitle:[VowelInfo titleForVowelFeatureType:vowelFeatureType] andImagePath:[VowelInfo imagePathForVowelFeatureType:vowelFeatureType]];
+    VowelInfo *info = [VowelInfo vowelInfoTitle:[VowelInfo titleForVowelFeatureType:vowelFeatureType] andImagePath:[VowelInfo imagePathForVowelFeatureType:vowelFeatureType]];
+
+    info.featureInfoType = vowelFeatureType;
+    return info;
 }
 
 + (VowelInfo *)vowelInfoTitle:(NSString *)title andImagePath:(NSString *)imagePath
@@ -77,5 +80,25 @@
 {
     return @"Vowel";
 }
+
+- (NSInteger)factorOrderView
+{
+    return 3;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [super encodeWithCoder:aCoder];
+}
+
 
 @end
