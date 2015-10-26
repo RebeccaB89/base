@@ -11,6 +11,7 @@
 typedef enum : NSUInteger
 {
     topMenuTypeShapes,
+    topMenuTypeNewWord,
     topMenuTypeDictionnary,
     topMenuTypeSettings
 } TopMenuType;
@@ -28,6 +29,8 @@ typedef enum : NSUInteger
     __weak IBOutlet UIToolbar *_menuToolbar;
     
     __weak IBOutlet UIBarButtonItem *_shapeItem;
+    
+    __weak IBOutlet UIBarButtonItem *_newWordItem;
     __weak IBOutlet UIBarButtonItem *_dictionnaryItem;
     __weak IBOutlet UIBarButtonItem *_settingsItem;
 }

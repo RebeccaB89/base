@@ -9,6 +9,13 @@
 #import "UIMagnetView.h"
 #import "UIZoomableView.h"
 #import "UIZoomableDraggableView.h"
+#import "UITemplateView.h"
+
+#import "MouthInfo.h"
+#import "ThroatInfo.h"
+#import "ColorInfo.h"
+#import "VowelInfo.h"
+#import "SyllableTimeInfo.h"
 
 @implementation UIMagnetView
 
@@ -18,8 +25,14 @@
     magnetView.origin = point;
     [superView addSubview:magnetView];
     NSMutableArray *viewToRemove = [NSMutableArray array];
-    for (UIView *subview in superView.subviews)
+    for (UIView *placeholder in superView.subviews)
     {
+        UIView *subview = placeholder;
+        if ([placeholder.subviews.firstObject isKindOfClass:[UITemplateView class]])
+        {
+            subview = placeholder.subviews.firstObject;
+        }
+        
         if ([subview isKindOfClass:[UIMagnetView class]])
         {
             continue;
@@ -38,6 +51,7 @@
                 goodMagnet = placeholder;
             }
         }
+        
         if (goodMagnet)
         {
             CGRect subviewFrame = [superView convertRect:subview.frame toView:goodMagnet];
@@ -134,6 +148,107 @@
     [magnetView removeFromSuperview];
 }
 
+- (id)copy
+{
+    UIMagnetView *copy = [UIMagnetView loadFromNib];
+
+    NSArray *featureInfos = self.featureInfos;
+//    for (FeatureInfo *feature in featureInfos)
+//    {
+//        [copy addTemplateViewForFeatureInfo:feature];
+//    }
+    [self addTemplateView:(UITemplateView *)self.mainView.subviews.firstObject inSubview:copy.mainView];
+    [self addTemplateView:(UITemplateView *)self.throatView.subviews.firstObject inSubview:copy.throatView];
+    [self addTemplateView:(UITemplateView *)self.accesoryView.subviews.firstObject inSubview:copy.accesoryView];
+    [self addTemplateView:(UITemplateView *)self.vowelView.subviews.firstObject inSubview:copy.vowelView];
+    [self addTemplateView:(UITemplateView *)self.soundView.subviews.firstObject inSubview:copy.soundView];
+    [self addTemplateView:(UITemplateView *)self.colorView.subviews.firstObject inSubview:copy.colorView];
+    
+    return copy;
+}
+
+- (void)addTemplateView:(UITemplateView *)templateView inSubview:(UIView *)subview
+{
+    if (!templateView)
+    {
+        return;
+    }
+    UITemplateView *tempTemplateView = [UITemplateView loadFromNib];
+    tempTemplateView.frame = templateView.frame;
+    tempTemplateView.featureInfo = templateView.featureInfo;
+
+    UIDraggableView *draggableView = (UIDraggableView *)tempTemplateView;
+    [draggableView setDraggable:NO];
+    UIZoomableView *zoomableView = (UIZoomableView *)tempTemplateView;
+    [zoomableView setZoomable:NO];
+    
+    [subview addSubview:tempTemplateView];
+}
+
+- (void)addTemplateViewForFeatureInfo:(FeatureInfo *)featureInfo
+{
+    if ([featureInfo isKindOfClass:[MouthInfo class]])
+    {
+        UITemplateView *templateView = [UITemplateView loadFromNib];
+        
+        templateView.featureInfo = featureInfo;
+        templateView.frame = _throatView.bounds;
+        
+        UIDraggableView *draggableView = (UIDraggableView *)templateView;
+        [draggableView setDraggable:NO];
+        UIZoomableView *zoomableView = (UIZoomableView *)templateView;
+        [zoomableView setZoomable:NO];
+
+        [_throatView addSubview:templateView];
+    }
+    
+    if ([featureInfo isKindOfClass:[ColorInfo class]])
+    {
+        UITemplateView *templateView = [UITemplateView loadFromNib];
+
+        templateView.featureInfo = featureInfo;
+        templateView.frame = _mainView.bounds;
+        
+        UIDraggableView *draggableView = (UIDraggableView *)templateView;
+        [draggableView setDraggable:NO];
+        UIZoomableView *zoomableView = (UIZoomableView *)templateView;
+        [zoomableView setZoomable:NO];
+
+        
+        [_mainView addSubview:templateView];
+    }
+    
+    if ([featureInfo isKindOfClass:[ThroatInfo class]])
+    {
+        UITemplateView *templateView = [UITemplateView loadFromNib];
+
+        templateView.featureInfo = featureInfo;
+        templateView.frame = _vowelView.bounds;
+        
+        UIDraggableView *draggableView = (UIDraggableView *)templateView;
+        [draggableView setDraggable:NO];
+        UIZoomableView *zoomableView = (UIZoomableView *)templateView;
+        [zoomableView setZoomable:NO];
+
+        [_vowelView addSubview:templateView];
+    }
+    
+    if ([featureInfo isKindOfClass:[SyllableTimeInfo class]])
+    {
+        UITemplateView *templateView = [UITemplateView loadFromNib];
+        
+        templateView.featureInfo = featureInfo;
+        templateView.frame = _soundView.bounds;
+        
+        UIDraggableView *draggableView = (UIDraggableView *)templateView;
+        [draggableView setDraggable:NO];
+        UIZoomableView *zoomableView = (UIZoomableView *)templateView;
+        [zoomableView setZoomable:NO];
+        
+        [_soundView addSubview:templateView];
+    }
+}
+
 - (BOOL)view:(UIView *)view isInsidePlaceHolder:(UIView *)placeHolder
 {
     CGRect intersection = CGRectIntersection(view.frame, placeHolder.frame);
@@ -143,6 +258,51 @@
         return YES;
     }
     return NO;
+}
+
+- (void)setIsSelected:(BOOL)isSelected
+{
+    _isSelected = isSelected;
+    
+    [self layoutData];
+}
+
+- (void)layoutData
+{
+    if (_isSelected)
+    {
+        self.layer.borderWidth = 3.0;
+        self.layer.borderColor = [UIColor blueColor].CGColor;
+        self.layer.cornerRadius = 30.0;
+
+    }
+    else
+    {
+        self.layer.borderWidth = 0.0;
+        self.layer.borderColor = [UIColor clearColor].CGColor;
+        self.layer.cornerRadius = 00.0;
+    }
+}
+
+- (NSArray *)featureInfos
+{
+    NSMutableArray *feautureInfos = [NSMutableArray array];
+    
+    for (UIView *placeholder in self.subviews)
+    {
+        UIView *subview = placeholder.subviews.firstObject;
+        
+        if ([subview isKindOfClass:[UITemplateView class]])
+        {
+            UITemplateView *templateView = (UITemplateView *)subview;
+            if (templateView.featureInfo)
+            {
+                [feautureInfos addObject:templateView.featureInfo];
+            }
+        }
+    }
+    
+    return feautureInfos;
 }
 
 - (UIView *)mainView

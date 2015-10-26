@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -18,6 +18,12 @@
                         <barButtonItem title="Item" id="HYH-Cn-WMc" userLabel="Shape">
                             <connections>
                                 <action selector="menuItemClicked:" destination="iN0-l3-epB" id="Ury-ES-Mu7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="IXT-IT-H3q"/>
+                        <barButtonItem title="Item" id="Re7-2E-PY8" userLabel="add new word">
+                            <connections>
+                                <action selector="menuItemClicked:" destination="-2" id="jLT-P4-q7F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="6aB-nf-Tjs"/>
@@ -46,6 +52,7 @@
             <connections>
                 <outlet property="_dictionnaryItem" destination="Lu9-Si-PO6" id="6sc-bF-5hO"/>
                 <outlet property="_menuToolbar" destination="ngZ-EL-ARI" id="wgf-bL-YOG"/>
+                <outlet property="_newWordItem" destination="Re7-2E-PY8" id="eZg-BW-max"/>
                 <outlet property="_settingsItem" destination="Q8P-91-BGx" id="SS7-d7-7oH"/>
                 <outlet property="_shapeItem" destination="HYH-Cn-WMc" id="64P-fW-CiJ"/>
             </connections>

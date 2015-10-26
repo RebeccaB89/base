@@ -55,6 +55,12 @@ static viewLogic *sharedInstance = nil;
     [self presentViewController:_magnetBoardViewController animated:NO onWindow:YES completion:nil];
 }
 
+- (void)presentModalViewController:(UIViewController *)viewController
+{
+    viewController.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:viewController animated:YES onWindow:NO completion:nil];
+}
+
 - (UIViewController *)currentViewController
 {
     if ([[Shared appDelegate].window.rootViewController isKindOfClass:[UINavigationController class]])
@@ -71,6 +77,11 @@ static viewLogic *sharedInstance = nil;
         [Shared appDelegate].window.rootViewController = viewController;
     else
         [[self currentViewController] presentViewController:viewController animated:animated completion:completion];
+}
+
+- (UIMagnetBoardViewController *)magnetBoardViewController
+{
+    return _magnetBoardViewController;
 }
 
 @end

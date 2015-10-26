@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DictionnaryManager.h"
 
-@interface UIDictionnaryViewController : UIViewController
+@interface UIDictionnaryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    __weak IBOutlet UITableView *_tableView;
+    
+    __weak IBOutlet UISearchBar *_searchBar;
+    
+    __weak IBOutlet UIButton *_addNewWordButton;
+    
+    NSArray *_words;
+}
+
+- (IBAction)addNewWordClicked:(UIButton *)sender;
 
 @end

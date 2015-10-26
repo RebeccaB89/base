@@ -24,6 +24,9 @@
     _shapeItem.tag = topMenuTypeShapes;
     _shapeItem.title = NLS(@"SHAPES");
     
+    _newWordItem.tag = topMenuTypeNewWord;
+    _newWordItem.title = NLS(@"ADD NEW WORD");
+    
     _dictionnaryItem.tag = topMenuTypeDictionnary;
     _dictionnaryItem.title = NLS(@"DICTIONNARY");
     

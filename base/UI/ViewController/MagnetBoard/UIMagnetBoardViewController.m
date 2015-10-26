@@ -11,8 +11,11 @@
 #import "UIDraggableView.h"
 #import "UIZoomableDraggableView.h"
 #import "UIFeatureViewController.h"
+#import "UIDictionnaryViewController.h"
 #import "UITemplateView.h"
 #import "UIMagnetView.h"
+#import "UINewWordViewController.h"
+#import "viewLogic.h"
 
 @interface UIMagnetBoardViewController ()
 
@@ -86,12 +89,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)showHideTopMenu:(id)sender
 {
     CGFloat newConstant ;
@@ -124,12 +121,49 @@
             return;
         }
         UIMagnetView *magnetView = [UIMagnetView magnetViewForSuperView:self.view removeFromSuperView:YES inPoint:sender.view.origin];
+        
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidTapClicked:)];
+        tapGesture.numberOfTapsRequired = 2;
+        [magnetView addGestureRecognizer:tapGesture];
+        
+        [self updateTapGesture];
     }
-//    UIView *senderView = sender.view;
-//    int i = 0;
-//    i++;
-//    UIMagnetView *magnetView = [UIMagnetView magnetViewForSuperView:self.view removeFromSuperView:YES inPoint:sender.view.center];
- //   [self updateTapGesture];
+}
+
+- (void)viewDidTapClicked:(UITapGestureRecognizer *)sender
+{
+    UIView *senderView = sender.view;
+    
+    for (UIView *subview in self.view.subviews)
+    {
+        if ([subview isKindOfClass:[UIMagnetView class]] && subview != senderView)
+        {
+            UIMagnetView *magnetView = (UIMagnetView *)subview;
+            magnetView.isSelected = NO;
+        }
+    }
+    
+    if ([senderView isKindOfClass:[UIMagnetView class]])
+    {
+        UIMagnetView *magnetView = (UIMagnetView *)senderView;
+        magnetView.isSelected = !magnetView.isSelected;
+    }
+}
+
+- (UIMagnetView *)magnetSelected
+{
+    UIMagnetView *magnetView = nil;
+    for (UIView *subview in self.view.subviews)
+    {
+        if ([subview isKindOfClass:[UIMagnetView class]] && [(UIMagnetView *)subview isSelected])
+        {
+            magnetView = (UIMagnetView *)subview ;
+            
+            break;
+        }
+    }
+    
+    return magnetView;
 }
 
 - (void)openShapesFromItem:(UIBarButtonItem *)item
@@ -140,6 +174,43 @@
     _popover = [[UIPopoverController alloc] initWithContentViewController:featureController];
     _popover.delegate = self;
     [_popover presentPopoverFromBarButtonItem:item permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
+- (void)openDictionnaryFromItem:(UIBarButtonItem *)item
+{
+    UIDictionnaryViewController *dictionnaryController = [UIDictionnaryViewController loadFromNib];
+    
+    _popover = [[UIPopoverController alloc] initWithContentViewController:dictionnaryController];
+    _popover.delegate = self;
+    [_popover presentPopoverFromBarButtonItem:item permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
+- (void)addNewWordClicked:(UIBarButtonItem *)item
+{
+    UIMagnetView *magnetViewSelected = [self magnetSelected];
+    if (!magnetViewSelected)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NLS(@"No word selected") message:NLS(@"Please double click on word to select and add it") delegate:nil cancelButtonTitle:NLS(@"OK") otherButtonTitles:nil];
+        
+        [alert show];
+        
+        return;
+    }
+    
+    UIMagnetView *copy = [magnetViewSelected copy];
+//    copy.origin = CGPointMake(100, 100);
+//
+//    [self.view addSubview:copy];
+    
+    NSArray *featuresInfo = magnetViewSelected.featureInfos;
+    
+    UINewWordViewController *newWordViewController = [UINewWordViewController loadFromNib];
+    
+    newWordViewController.magnetView = copy;
+    
+    [[viewLogic sharedInstance] presentModalViewController:newWordViewController];
+    
+    //[[DictionnaryManager sharedInstance] addFeatureInfosToWords:featuresInfo];
 }
 
 /* UIFeatureViewController Delegates */
@@ -175,7 +246,13 @@
         case topMenuTypeShapes:
             [self openShapesFromItem:item];
             break;
-            
+        case topMenuTypeDictionnary:
+            [self openDictionnaryFromItem:item];
+            break;
+        case topMenuTypeNewWord:
+            [self addNewWordClicked:item];
+            break;
+
         default:
             break;
     }

@@ -7,6 +7,8 @@
 //
 
 #import "UIDictionnaryViewController.h"
+#import "UIDictionnaryTableViewCell.h"
+#import "viewLogic.h"
 
 @interface UIDictionnaryViewController ()
 
@@ -17,13 +19,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [_tableView registerNib:[UINib nibWithNibName:@"UIDictionnaryTableViewCell" bundle:nil] forCellReuseIdentifier:@"UIDictionnaryTableViewCell"];
+    
+    [_addNewWordButton setTitle:NLS(@"Add new word") forState:UIControlStateNormal];
+    
+    [self reloadData];
+    [self layoutData];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)reloadData
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _words = [[DictionnaryManager sharedInstance] words];
 }
+
+- (void)layoutData
+{
+    [_tableView reloadData];
+}
+
+/* UITableView Delegates */
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_words count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIDictionnaryTableViewCell * dictionaryCell = [tableView dequeueReusableCellWithIdentifier:@"UIDictionnaryTableViewCell"];
+    
+    
+    return dictionaryCell;
+}
+
+/* End UITableView Delegates */
+
+- (IBAction)addNewWordClicked:(UIButton *)sender
+{
+   }
 
 @end

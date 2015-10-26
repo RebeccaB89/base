@@ -26,6 +26,7 @@
 + (UIMagnetView *)magnetViewForSuperView:(UIView *)superView removeFromSuperView:(BOOL)removeFromSuperView inPoint:(CGPoint)point;
 + (void)breakMagnetView:(UIMagnetView *)magnetView;
 + (CGFloat)percentOfIntersectionWithRect:(CGRect)rect1 withRect2:(CGRect)rect2;
+- (NSArray *)featureInfos;
 
 - (UIView *)mainView;
 - (UIView *)throatView;
@@ -33,5 +34,7 @@
 - (UIView *)colorView;
 - (UIView *)soundView;
 - (UIView *)accesoryView;
+
+@property (nonatomic, unsafe_unretained) BOOL isSelected;
 
 @end

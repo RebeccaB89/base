@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIImageChooserViewController">
+            <connections>
+                <outlet property="_cameraButton" destination="NNH-3L-djF" id="eCh-sd-Fv2"/>
+                <outlet property="_collectionView" destination="m0k-aD-E7v" id="7tj-1S-4LC"/>
+                <outlet property="_libraryButton" destination="EYc-O6-QqM" id="oHu-Nh-MuW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-zP-Czc">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYc-O6-QqM" userLabel="Library Button">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                            <state key="normal" title="Button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="libraryButtonClicked:" destination="-1" eventType="touchUpInside" id="wgr-fA-VYP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNH-3L-djF" userLabel="Camera Button">
+                            <rect key="frame" x="300" y="0.0" width="300" height="100"/>
+                            <state key="normal" title="Button">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cameraButtonClicked:" destination="-1" eventType="touchUpInside" id="TqR-bh-jqH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NNH-3L-djF" secondAttribute="bottom" id="Lb5-KY-eys"/>
+                        <constraint firstAttribute="height" constant="100" id="MKi-ln-29P"/>
+                        <constraint firstItem="EYc-O6-QqM" firstAttribute="width" secondItem="NNH-3L-djF" secondAttribute="width" id="S98-gu-CUM"/>
+                        <constraint firstItem="NNH-3L-djF" firstAttribute="leading" secondItem="EYc-O6-QqM" secondAttribute="trailing" id="YTH-ws-o4a"/>
+                        <constraint firstItem="EYc-O6-QqM" firstAttribute="top" secondItem="RaL-zP-Czc" secondAttribute="top" id="aTm-Yl-PLc"/>
+                        <constraint firstItem="NNH-3L-djF" firstAttribute="top" secondItem="RaL-zP-Czc" secondAttribute="top" id="ilL-w0-uPx"/>
+                        <constraint firstItem="EYc-O6-QqM" firstAttribute="leading" secondItem="RaL-zP-Czc" secondAttribute="leading" id="txS-cx-d20"/>
+                        <constraint firstAttribute="bottom" secondItem="EYc-O6-QqM" secondAttribute="bottom" id="u1G-3G-Il1"/>
+                        <constraint firstAttribute="trailing" secondItem="NNH-3L-djF" secondAttribute="trailing" id="yjk-uv-4qe"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="m0k-aD-E7v">
+                    <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UX5-71-cG2">
+                        <size key="itemSize" width="100" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RaL-zP-Czc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ARe-4z-AAI"/>
+                <constraint firstAttribute="bottom" secondItem="m0k-aD-E7v" secondAttribute="bottom" id="BEi-r9-ass"/>
+                <constraint firstItem="RaL-zP-Czc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TG0-ua-pbp"/>
+                <constraint firstAttribute="trailing" secondItem="RaL-zP-Czc" secondAttribute="trailing" id="XjW-5l-xVn"/>
+                <constraint firstAttribute="trailing" secondItem="m0k-aD-E7v" secondAttribute="trailing" id="Z42-iz-6eL"/>
+                <constraint firstItem="m0k-aD-E7v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pMm-G9-1je"/>
+                <constraint firstItem="m0k-aD-E7v" firstAttribute="top" secondItem="RaL-zP-Czc" secondAttribute="bottom" id="vbY-wG-vDK"/>
+                <constraint firstAttribute="trailing" secondItem="RaL-zP-Czc" secondAttribute="trailing" constant="70" id="xiQ-b3-DkX"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="xiQ-b3-DkX"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

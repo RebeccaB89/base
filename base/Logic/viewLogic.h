@@ -19,5 +19,7 @@
 
 - (void)applicationLaunched; // call this on application launch
 - (void)presentMainViewController;
+- (UIMagnetBoardViewController *)magnetBoardViewController;
+- (void)presentModalViewController:(UIViewController *)viewController;
 
 @end

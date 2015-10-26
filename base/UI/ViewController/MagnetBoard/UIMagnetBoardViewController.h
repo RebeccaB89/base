@@ -10,6 +10,7 @@
 #import "UITopMenuView.h"
 #import "UIFeatureViewController.h"
 #import "UITemplateView.h"
+#import "UIMagnetView.h"
 
 @interface UIMagnetBoardViewController : UIViewController <UIPopoverControllerDelegate, UITopMenuViewDelegate, UIFeatureViewControllerDelegate>
 {
@@ -23,5 +24,7 @@
     
     UITemplateView *_chosenTemplateView;
 }
+
+- (UIMagnetView *)magnetSelected;
 
 @end

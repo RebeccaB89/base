@@ -14,6 +14,7 @@
 {
     [super awakeFromNib];
     
+    self.backgroundColor = [UIColor clearColor];
     self.layer.borderColor = [[UIColor blackColor] CGColor];
     self.layer.borderWidth = 2.0f;
 }

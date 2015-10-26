@@ -8,7 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseSerializeData.h"
+#import "FeatureInfo.h"
+#import "WordInfo.h"
 
 @interface DictionnaryManager : BaseSerializeData
+{
+    NSArray *_words;
+}
+
++ (DictionnaryManager *)sharedInstance;
+
+- (NSArray *)words;
+- (BOOL)addFeatureInfosToWords:(NSArray *)featureInfos;
 
 @end
