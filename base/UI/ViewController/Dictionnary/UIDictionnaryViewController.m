@@ -49,14 +49,20 @@
 {
     UIDictionnaryTableViewCell * dictionaryCell = [tableView dequeueReusableCellWithIdentifier:@"UIDictionnaryTableViewCell"];
     
+    dictionaryCell.wordInfo = [_words objectAtIndex:indexPath.row];
     
     return dictionaryCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 /* End UITableView Delegates */
 
 - (IBAction)addNewWordClicked:(UIButton *)sender
 {
-   }
+}
 
 @end

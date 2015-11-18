@@ -12,11 +12,11 @@
 
 @protocol UIImageChooserViewControllerDelegate <NSObject>
 
-- (void)imageChooserViewController:(UIImageChooserViewController *)imageChooserViewController didSelectedImage:(NSString *)imagePath;
+- (void)imageChooserViewController:(UIImageChooserViewController *)imageChooserViewController didSelectedImage:(NSString *)imagePath withImageName:(NSString *)imageName;
 
 @end
 
-@interface UIImageChooserViewController : UIViewController < UICollectionViewDataSource, UICollectionViewDelegate>
+@interface UIImageChooserViewController : UIViewController < UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate>
 {
     __weak IBOutlet UIButton *_libraryButton;
     

@@ -13,12 +13,12 @@
 
 @interface DictionnaryManager : BaseSerializeData
 {
-    NSArray *_words;
+    NSMutableArray *_words;
 }
 
 + (DictionnaryManager *)sharedInstance;
 
 - (NSArray *)words;
-- (BOOL)addFeatureInfosToWords:(NSArray *)featureInfos;
+- (BOOL)addWordInfo:(WordInfo *)wordInfo;
 
 @end

@@ -16,6 +16,11 @@
 #import "UIMagnetView.h"
 #import "UINewWordViewController.h"
 #import "viewLogic.h"
+#import "UIDirectionView.h"
+#import "UISettingsViewController.h"
+#import "SettingsManager.h"
+
+#define Direction_view_tag 65631
 
 @interface UIMagnetBoardViewController ()
 
@@ -26,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
 //    UIZoomableView *zoomableView = [[UIZoomableView alloc] initWithFrame:CGRectMake(self.view.centerX, self.view.centerY, 200, 200)];
 //    zoomableView.backgroundColor = [UIColor purpleColor];
@@ -41,6 +47,63 @@
     
     [self layoutTopMenu];
     [self addTapGesture];
+    [self layoutDirectionView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutDirectionView) name:SETTINGS_DIRECTION_CHANGE object:nil];
+    
+}
+
+- (void)layoutDirectionView
+{
+    UIDirectionView *directionView = (UIDirectionView *)[self.view viewWithTag:Direction_view_tag];
+    if (!directionView)
+    {
+        directionView = [[UIDirectionView alloc] init];
+        directionView.tag = Direction_view_tag;
+        [self.view addSubview:directionView];
+        
+        directionView.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        NSLayoutConstraint *directionViewBottomConstraint = [NSLayoutConstraint constraintWithItem:directionView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-100];
+        
+        NSLayoutConstraint *directionViewTopConstraint = [NSLayoutConstraint constraintWithItem:directionView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:300];
+        
+        NSDictionary *views = @{@"directionView" : directionView};
+        
+        NSArray *directionViewHorizontalConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[directionView]-100-|" options:0 metrics:nil views:views];
+        
+        [self.view addConstraint:directionViewBottomConstraint];
+        [self.view addConstraint:directionViewTopConstraint];
+        [self.view addConstraints:directionViewHorizontalConstraint];
+    }
+    
+    directionView.directionViewType = [SettingsManager sharedInstance].directionReadType;
+    if ([SettingsManager sharedInstance].directionReadType == noDirectionViewType)
+    {
+        directionView.directionEnabled = NO;
+    }
+    else
+    {
+        directionView.directionEnabled = YES;
+    }
+    
+    if ([SettingsManager sharedInstance].directionReadType == noFrame)
+    {
+        directionView.hidden = YES;
+    }
+    else
+    {
+        directionView.hidden = NO;
+    }
+    
+    [self updateViewArchitecture];
+}
+
+- (NSUInteger) supportedInterfaceOrientations
+{
+    //Because your app is only landscape, your view controller for the view in your
+    // popover needs to support only landscape
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 - (void)layoutTopMenu
@@ -134,15 +197,15 @@
 {
     UIView *senderView = sender.view;
     
-    for (UIView *subview in self.view.subviews)
-    {
-        if ([subview isKindOfClass:[UIMagnetView class]] && subview != senderView)
-        {
-            UIMagnetView *magnetView = (UIMagnetView *)subview;
-            magnetView.isSelected = NO;
-        }
-    }
-    
+//    for (UIView *subview in self.view.subviews)
+//    {
+//        if ([subview isKindOfClass:[UIMagnetView class]] && subview != senderView)
+//        {
+//            UIMagnetView *magnetView = (UIMagnetView *)subview;
+//            magnetView.isSelected = NO;
+//        }
+//    }
+//    
     if ([senderView isKindOfClass:[UIMagnetView class]])
     {
         UIMagnetView *magnetView = (UIMagnetView *)senderView;
@@ -150,20 +213,18 @@
     }
 }
 
-- (UIMagnetView *)magnetSelected
+- (NSArray *)magnetsSelected
 {
-    UIMagnetView *magnetView = nil;
+    NSMutableArray *magnetsSelected = [NSMutableArray array];
     for (UIView *subview in self.view.subviews)
     {
         if ([subview isKindOfClass:[UIMagnetView class]] && [(UIMagnetView *)subview isSelected])
         {
-            magnetView = (UIMagnetView *)subview ;
-            
-            break;
+            [magnetsSelected addObject:subview];
         }
     }
     
-    return magnetView;
+    return magnetsSelected;
 }
 
 - (void)openShapesFromItem:(UIBarButtonItem *)item
@@ -185,10 +246,19 @@
     [_popover presentPopoverFromBarButtonItem:item permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
+- (void)openSettingsFromItem:(UIBarButtonItem *)item
+{
+    UISettingsViewController *settingsController = [UISettingsViewController loadFromNib];
+    
+    _popover = [[UIPopoverController alloc] initWithContentViewController:settingsController];
+    _popover.delegate = self;
+    [_popover presentPopoverFromBarButtonItem:item permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
 - (void)addNewWordClicked:(UIBarButtonItem *)item
 {
-    UIMagnetView *magnetViewSelected = [self magnetSelected];
-    if (!magnetViewSelected)
+    NSArray *magnetsSelected  = [self magnetsSelected];
+    if (!magnetsSelected.count)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NLS(@"No word selected") message:NLS(@"Please double click on word to select and add it") delegate:nil cancelButtonTitle:NLS(@"OK") otherButtonTitles:nil];
         
@@ -197,21 +267,38 @@
         return;
     }
     
-    UIMagnetView *copy = [magnetViewSelected copy];
-//    copy.origin = CGPointMake(100, 100);
-//
-//    [self.view addSubview:copy];
+    NSMutableArray *copys = [NSMutableArray array];
     
-    NSArray *featuresInfo = magnetViewSelected.featureInfos;
+    for (UIMagnetView *magnetView in magnetsSelected)
+    {
+        [copys addObject:[magnetView copy]];
+    }
+    
+//    NSArray *copys = [[NSArray alloc] initWithArray:magnetsSelected copyItems:YES];
     
     UINewWordViewController *newWordViewController = [UINewWordViewController loadFromNib];
     
-    newWordViewController.magnetView = copy;
-    
+    newWordViewController.magnetViews = magnetsSelected;
+    newWordViewController.delegate = self;
     [[viewLogic sharedInstance] presentModalViewController:newWordViewController];
     
     //[[DictionnaryManager sharedInstance] addFeatureInfosToWords:featuresInfo];
 }
+
+- (void)saveWordInfo:(WordInfo *)wordInfo
+{
+    [[DictionnaryManager sharedInstance] addWordInfo:wordInfo];
+}
+
+/* UINewWordViewController Delegates */
+
+-(void)newWordViewController:(UINewWordViewController *)newWordViewController willDismissWithNewWord:(WordInfo *)wordInfo
+{
+    WordInfo *copy = [wordInfo copy];
+    [self saveWordInfo:copy];
+}
+
+/* End UINewWordViewController Delegates */
 
 /* UIFeatureViewController Delegates */
 
@@ -251,6 +338,9 @@
             break;
         case topMenuTypeNewWord:
             [self addNewWordClicked:item];
+            break;
+        case topMenuTypeSettings:
+            [self openSettingsFromItem:item];
             break;
 
         default:

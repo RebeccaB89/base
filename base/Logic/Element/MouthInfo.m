@@ -142,5 +142,11 @@
     [super encodeWithCoder:aCoder];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    MouthInfo *copy = (MouthInfo *)[super copyWithZone:zone];
+    
+    return copy;
+}
 
 @end

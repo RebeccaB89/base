@@ -33,7 +33,7 @@
             subview = placeholder.subviews.firstObject;
         }
         
-        if ([subview isKindOfClass:[UIMagnetView class]])
+        if ([subview isKindOfClass:[UIMagnetView class]] || ![subview isKindOfClass:[UITemplateView class]])
         {
             continue;
         }
@@ -45,7 +45,7 @@
             CGRect magnetFrame = [superView convertRect:placeholder.frame fromView:magnetView];
             CGFloat percent = [UIMagnetView percentOfIntersectionWithRect:magnetFrame withRect2:subview.frame];
             //percent = percent/magnetViews.tag; //factor
-            if (percent > bigPercent && placeholder.subviews.count == 0)
+            if (percent > bigPercent && placeholder.subviews.count == 0 && placeholder.tag < 100)
             {
                 bigPercent = percent;
                 goodMagnet = placeholder;
@@ -148,6 +148,25 @@
     [magnetView removeFromSuperview];
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.selectionDisplay = YES;
+}
+
+- (void)setSelectionDisplay:(BOOL)selectionDisplay
+{
+    _selectionDisplay = selectionDisplay;
+    
+    [self layoutData];
+}
+
+- (CGSize)intrinsicContentSize
+{
+    return CGSizeMake(50, 50);
+}
+
 - (id)copy
 {
     UIMagnetView *copy = [UIMagnetView loadFromNib];
@@ -165,6 +184,16 @@
     [self addTemplateView:(UITemplateView *)self.colorView.subviews.firstObject inSubview:copy.colorView];
     
     return copy;
+}
+
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    
+}
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [self copy];
 }
 
 - (void)addTemplateView:(UITemplateView *)templateView inSubview:(UIView *)subview
@@ -249,6 +278,18 @@
     }
 }
 
+- (NSInteger)indexForView:(UIView *)subview
+{
+    return subview.tag;
+}
+
+- (UIView *)subviewForIndex:(NSInteger)index
+{
+    UIView *subview = [self viewWithTag:index];
+    
+    return subview;
+}
+
 - (BOOL)view:(UIView *)view isInsidePlaceHolder:(UIView *)placeHolder
 {
     CGRect intersection = CGRectIntersection(view.frame, placeHolder.frame);
@@ -269,12 +310,11 @@
 
 - (void)layoutData
 {
-    if (_isSelected)
+    if (_selectionDisplay)
     {
         self.layer.borderWidth = 3.0;
-        self.layer.borderColor = [UIColor blueColor].CGColor;
+        self.layer.borderColor = [UIColor blackColor].CGColor;
         self.layer.cornerRadius = 30.0;
-
     }
     else
     {
@@ -282,11 +322,26 @@
         self.layer.borderColor = [UIColor clearColor].CGColor;
         self.layer.cornerRadius = 00.0;
     }
+    if (_isSelected)
+    {
+        self.layer.borderColor = [UIColor blueColor].CGColor;
+
+    }
+    else
+    {
+        self.layer.borderColor = [UIColor blackColor].CGColor;
+    }
 }
 
 - (NSArray *)featureInfos
 {
     NSMutableArray *feautureInfos = [NSMutableArray array];
+    
+    //insert empty feature
+    for (NSInteger i = 0; i < self.subviews.count; ++i)
+    {
+        [feautureInfos addObject:[NSNull null]];
+    }
     
     for (UIView *placeholder in self.subviews)
     {
@@ -297,12 +352,34 @@
             UITemplateView *templateView = (UITemplateView *)subview;
             if (templateView.featureInfo)
             {
-                [feautureInfos addObject:templateView.featureInfo];
+                [feautureInfos setObject:templateView.featureInfo atIndexedSubscript:placeholder.tag];
             }
         }
     }
     
     return feautureInfos;
+}
+
+- (void)setFeatureInfos:(NSArray *)featureInfos
+{
+    if (self.mainView.subviews.firstObject != nil)
+    {
+       // return;
+    }
+    for (int i = 0; i < featureInfos.count; i++)
+    {
+        FeatureInfo *feature = [featureInfos objectAtIndex:i];
+        if ([feature isKindOfClass:[NSNull class]])
+        {
+            continue;
+        }
+        UIView *subview = [self subviewForIndex:i];
+        [subview removeAllSubviews];
+        UITemplateView *templateView = [UITemplateView loadFromNib];
+        templateView.frame = subview.bounds;
+        templateView.featureInfo = feature;
+        [subview addSubview:templateView];
+    }
 }
 
 - (UIView *)mainView

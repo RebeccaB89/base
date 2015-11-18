@@ -60,4 +60,16 @@
     [aCoder encodeInt:(int)_featureInfoType forKey:@"featureInfoType"];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    FeatureInfo *copy = [[[self class] allocWithZone:zone] init];
+
+    copy.title = [self.title copyWithZone:zone];
+    copy.imagePath = [self.imagePath copyWithZone:zone];
+    copy.factorRegex = self.factorRegex;
+    copy.featureInfoType = self.featureInfoType;
+
+    return copy;
+}
+
 @end

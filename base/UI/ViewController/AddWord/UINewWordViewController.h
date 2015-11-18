@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WordInfo.h"
 #import "UIMagnetView.h"
+#import "UIImageChooserViewController.h"
+#import "OAStackView.h"
+
 
 @class UINewWordViewController;
 
@@ -18,9 +21,13 @@
 
 @end
 
-@interface UINewWordViewController : UIViewController <UIPopoverControllerDelegate>
+@interface UINewWordViewController : UIViewController <UIPopoverControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate, UIImageChooserViewControllerDelegate>
 {
-    __weak IBOutlet UIView *_magnetPlaceholder;
+    __weak IBOutlet OAStackView *_magnetPlaceholder;
+    
+    __weak IBOutlet UIView *_stackPlaceholder;
+    
+    __weak IBOutlet NSLayoutConstraint *_magnetsViewWidthConstraint;
     __weak IBOutlet UITextField *_titleTextField;
     __weak IBOutlet UIImageView *_imageView;
     __weak IBOutlet UIButton *_addImageButton;
@@ -33,7 +40,7 @@
 - (IBAction)doneClicked:(UIBarButtonItem *)sender;
 - (IBAction)addImageClicked:(UIButton *)sender;
 
-@property (nonatomic, strong) UIMagnetView *magnetView;
+@property (nonatomic, strong) NSArray *magnetViews;
 
 @property (nonatomic, weak) id <UINewWordViewControllerDelegate> delegate;
 

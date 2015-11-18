@@ -58,6 +58,10 @@ static DictionnaryManager *sharedInstance = nil;
 
 - (void)initialize:(NSCoder *)aDecoder
 {
+    if (!_words)
+    {
+        _words = [NSMutableArray array];
+    }
 }
 
 - (NSArray *)words
@@ -65,9 +69,12 @@ static DictionnaryManager *sharedInstance = nil;
     return _words;
 }
 
-- (BOOL)addFeatureInfosToWords:(NSArray *)featureInfos
+- (BOOL)addWordInfo:(WordInfo *)wordInfo
 {
-    return NO;
+    [_words addObject:wordInfo];
+    [self save];
+    
+    return YES;
 }
 
 @end

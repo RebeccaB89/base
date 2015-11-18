@@ -25,7 +25,11 @@
     {
         self.title = [aDecoder decodeObjectForKey:@"title"];
         self.imagePath = [aDecoder decodeObjectForKey:@"imagePath"];
+        self.imageName = [aDecoder decodeObjectForKey:@"imageName"];
+
         self.featureInfos = [aDecoder decodeObjectForKey:@"featureInfos"];
+        
+        [self updateImagePath];
     }
     
     return self;
@@ -37,7 +41,41 @@
     
     [aCoder encodeObject:_title forKey:@"title"];
     [aCoder encodeObject:_imagePath forKey:@"imagePath"];
+    [aCoder encodeObject:_imageName forKey:@"imageName"];
     [aCoder encodeObject:_featureInfos forKey:@"featureInfos"];
+}
+
+- (void)updateImagePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                         NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"DefaultImageChooser"];
+    
+    NSString* path = [sourcePath stringByAppendingPathComponent:
+                      self.imageName];
+    
+    _imagePath = path;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    WordInfo *copy = [[WordInfo alloc] init];
+    
+    copy.title = [self.title copyWithZone:zone];
+    copy.imagePath = [self.imagePath copyWithZone:zone];
+    copy.imageName = [self.imageName copyWithZone:zone];
+
+    NSMutableArray *featuresInfo = [NSMutableArray array];
+    for (NSArray *features in self.featureInfos)
+    {
+        NSArray *subFeatures = [[NSArray alloc] initWithArray:features copyItems:YES];
+        [featuresInfo addObject:subFeatures];
+    }
+    
+    copy.featureInfos = featuresInfo;
+    return copy;
 }
 
 @end

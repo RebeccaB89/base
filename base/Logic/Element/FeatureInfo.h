@@ -7,7 +7,7 @@
 //
 
 #import "Element.h"
-
+#define numOFFeatureInfo 5          //update the num of feature 
 @interface FeatureInfo : Element
 
 + (FeatureInfo *)featureWithTitle:(NSString *)title andImagePath:(NSString *)imagePath;

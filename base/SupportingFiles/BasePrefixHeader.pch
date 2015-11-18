@@ -18,4 +18,6 @@
 
 #import "Shared.h"
 
+#import "base-Swift.h"
+
 #endif

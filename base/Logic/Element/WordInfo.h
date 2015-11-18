@@ -7,6 +7,7 @@
 //
 
 #import "Element.h"
+#import "FeatureInfo.h"
 
 @interface WordInfo : Element
 
@@ -14,6 +15,7 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *imagePath;
+@property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSArray *featureInfos;
 
 @end
