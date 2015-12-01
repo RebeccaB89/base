@@ -18,6 +18,8 @@
 
 #import "Shared.h"
 
-#import "base-Swift.h"
+#import "PureLayout.h"
+#import "UserManager.h"
+#import "viewLogic.h"
 
 #endif

@@ -52,7 +52,7 @@ static FeaturesManager *sharedInstance = nil;
 
 - (void)loadFeatures
 {
-    _features = [NSMutableArray arrayWithObjects:[FeatureInfo featureWithTitle:NLS(@"Mouths") andImagePath:@"Colors-01"], [FeatureInfo featureWithTitle:NLS(@"Colors") andImagePath:@"Colors-02"], [FeatureInfo featureWithTitle:NLS(@"Syllables") andImagePath:@"Colors-03"], [FeatureInfo featureWithTitle:NLS(@"Vawel") andImagePath:@"Colors-04"], [FeatureInfo featureWithTitle:NLS(@"Throat") andImagePath:@"Colors-04"], nil];
+    _features = [NSMutableArray arrayWithObjects:[FeatureInfo featureWithTitle:NLS(@"Mouths") andImagePath:@"Mouth-01"], [FeatureInfo featureWithTitle:NLS(@"Colors") andImagePath:@"Colors-01"], [FeatureInfo featureWithTitle:NLS(@"Continuation") andImagePath:@"Snake"], [FeatureInfo featureWithTitle:NLS(@"Vawel") andImagePath:@"Shapes-02"], [FeatureInfo featureWithTitle:NLS(@"Voice") andImagePath:@"Throat"], nil];
 }
 
 - (NSArray *)features

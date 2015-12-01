@@ -17,11 +17,23 @@
     self.backgroundColor = [UIColor clearColor];
     self.layer.borderColor = [[UIColor blackColor] CGColor];
     self.layer.borderWidth = 2.0f;
+    _deletable = YES;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
 }
 
 - (void)setFeatureInfo:(FeatureInfo *)featureInfo
 {
     _featureInfo = featureInfo;
+    [self layoutData];
+}
+
+- (void)setDeletable:(BOOL)deletable
+{
+    _deletable = deletable;
     [self layoutData];
 }
 
@@ -35,6 +47,13 @@
     {
         _imageView.image = nil;
     }
+    
+    _closeButton.hidden = !_deletable;
+}
+
+- (IBAction)closeButtonClicked:(UIButton *)sender
+{
+    [self removeFromSuperview];
 }
 
 @end

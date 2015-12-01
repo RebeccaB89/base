@@ -23,31 +23,20 @@
     
     [_addImageButton setTitle:NLS(@"Click to choose image") forState:UIControlStateNormal];
     
-    _magnetPlaceholder.spacing = 10;
-    _magnetPlaceholder.axis = UILayoutConstraintAxisHorizontal;
-    _magnetPlaceholder.distribution = OAStackViewDistributionFillEqually;
-    _magnetPlaceholder.alignment = OAStackViewAlignmentFill;
-    _magnetPlaceholder.layoutMarginsRelativeArrangement = YES;
-    _magnetPlaceholder.layoutMargins = UIEdgeInsetsMake(0, 10, 0, 10);
-    
-    _magnetPlaceholder.layer.borderWidth = 3.0;
-    _magnetPlaceholder.layer.borderColor = [UIColor purpleColor].CGColor;
-    _magnetPlaceholder.layer.cornerRadius = 30.0;
+    _stackView = [[OHStackView alloc] init];
+    _stackView.frame = _stackPlaceholder.bounds;
+    _stackView.spacing = CGSizeMake(10, 0);
+    _stackView.horizontalAlignment = OHStackAlignmentStackFirstEdges;
+    _stackView.verticalAlignment = OHStackAlignmentAlignFirstEdges;
 
-    TZStackView *stackView = [[TZStackView alloc] initWithArrangedSubviews:_magnetViews];
+    _stackView.layer.borderWidth = 3.0;
+    _stackView.layer.borderColor = [UIColor purpleColor].CGColor;
+    _stackView.layer.cornerRadius = 30.0;
     
-    stackView.translatesAutoresizingMaskIntoConstraints = NO;
-
-    stackView.axis = UILayoutConstraintAxisHorizontal;
-    stackView.distribution = TZStackViewDistributionFillEqually;
-    stackView.alignment = TZStackViewAlignmentCenter;
+    [_stackPlaceholder addSubview:_stackView];
     
-    [_stackPlaceholder addSubview:stackView];
-    
-    [_stackPlaceholder addConstraints:[stackView stretchToHeightOfSuperView]];
-    [_stackPlaceholder addConstraints:[stackView stretchToWidthOfSuperView]];
-    [_stackPlaceholder addConstraints:[stackView centerHorizontallyTo:_stackPlaceholder]];
-    [_stackPlaceholder addConstraints:[stackView centerVerticallyTo:_stackPlaceholder]];
+    [_stackView autoPinEdgesToSuperviewEdges];
+    [_stackView autoCenterInSuperview];
     
     if (_magnetViews.count)
     {
@@ -69,6 +58,12 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+}
+
 - (void)setMagnetViews:(NSArray *)magnetViews
 {
     for (UIView *subview in _magnetViews)
@@ -88,40 +83,23 @@
 
 - (void)addMagnetViewsToPlaceholder:(NSArray *)magnetsView
 {
-//    int count = magnetsView.count;
-//    
-//    int offset = 15;
-//    CGFloat maxWidhtItem = 200;
-//    CGFloat widhtItem = (_magnetPlaceholder.width - (offset * (count - 1)))/ count;
-//    
-//    if (widhtItem > maxWidhtItem)
-//    {
-//        widhtItem = maxWidhtItem;
-//    }
+    if (!_stackView)
+    {
+        return;
+    }
+    int divide = magnetsView.count > 0 ? magnetsView.count : 1;
+    CGFloat widthItem = (_stackView.width / divide) - (_stackView.spacing.width * (magnetsView.count - 1));
     
     for (UIMagnetView *subview in _magnetViews)
     {
+        if (widthItem < subview.width )
+        {
+            subview.width = widthItem;
+        }
         subview.backgroundColor = [UIColor orangeColor];
-        [_magnetPlaceholder addArrangedSubview:subview];
-        
- //       NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:subview attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_magnetPlaceholder attribute:NSLayoutAttributeTop multiplier:1.0 constant:1];
-//
-//        [_magnetPlaceholder addConstraint:topConstraint];
+        [_stackView addSubview:subview];
     }
 }
-
-//- (void)setMagnetView:(UIMagnetView *)magnetView
-//{
-//    
-//    [_magnetView removeFromSuperview];
-//    
-//    _magnetView = magnetView;
-//    [_magnetView setDraggable:NO];
-//
-//    _magnetView.frame = _magnetPlaceholder.bounds;
-//    
-//    [_magnetPlaceholder addSubview:_magnetView];
-//}
 
 - (void)layoutData
 {

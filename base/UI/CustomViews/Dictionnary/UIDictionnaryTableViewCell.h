@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #include "UIMagnetView.h"
 #include "WordInfo.h"
+#import "OHStackView.h"
 
 @interface UIDictionnaryTableViewCell : UITableViewCell
 {
@@ -19,7 +20,7 @@
     __weak IBOutlet UIImageView *_imageView;
     
     UIMagnetView *_magnetView;
-    TZStackView *_stackView;
+    OHStackView *_stackView;
     NSMutableArray *_magnetViews;
 }
 

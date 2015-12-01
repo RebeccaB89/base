@@ -10,8 +10,7 @@
 #import "WordInfo.h"
 #import "UIMagnetView.h"
 #import "UIImageChooserViewController.h"
-#import "OAStackView.h"
-
+#import "OHStackView.h"
 
 @class UINewWordViewController;
 
@@ -23,7 +22,7 @@
 
 @interface UINewWordViewController : UIViewController <UIPopoverControllerDelegate, UITextFieldDelegate, UIAlertViewDelegate, UIImageChooserViewControllerDelegate>
 {
-    __weak IBOutlet OAStackView *_magnetPlaceholder;
+    OHStackView *_stackView;
     
     __weak IBOutlet UIView *_stackPlaceholder;
     

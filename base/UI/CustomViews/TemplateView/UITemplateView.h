@@ -13,8 +13,14 @@
 @interface UITemplateView : UIZoomableDraggableView
 {
     __weak IBOutlet UIImageView *_imageView;
+    
+    __weak IBOutlet UIButton *_closeButton;
 }
 
 @property (nonatomic, strong) FeatureInfo *featureInfo;
+
+@property (nonatomic, unsafe_unretained) BOOL deletable;
+
+- (IBAction)closeButtonClicked:(UIButton *)sender;
 
 @end

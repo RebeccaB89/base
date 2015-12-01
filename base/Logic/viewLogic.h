@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "UIMagnetBoardViewController.h"
-
+#import "UILoginViewController.h"
+#import "UIStudentChooserViewController.h"
+#import "UIRegisterViewController.h"
+#import "UINewStudentViewController.h"
 
 @interface viewLogic : NSObject
 {
@@ -18,6 +21,9 @@
 + (viewLogic *)sharedInstance;
 
 - (void)applicationLaunched; // call this on application launch
+- (void)presentLoginViewController;
+- (void)presentRegisterModalViewController;
+- (void)presentNewStudentModalViewController;
 - (void)presentMainViewController;
 - (UIMagnetBoardViewController *)magnetBoardViewController;
 - (void)presentModalViewController:(UIViewController *)viewController;

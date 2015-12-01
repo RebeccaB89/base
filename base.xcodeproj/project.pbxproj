@@ -107,24 +107,26 @@
 		B397F99F1BA00E210077C05F /* Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F99D1BA00E210077C05F /* Snake.png */; };
 		B397F9A01BA00E210077C05F /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F99E1BA00E210077C05F /* Sparkle.png */; };
 		B397F9A31BA00E420077C05F /* Throat.png in Resources */ = {isa = PBXBuildFile; fileRef = B397F9A21BA00E420077C05F /* Throat.png */; };
+		B3BF66B51C045768001FF8A6 /* close_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B3BF66B41C045768001FF8A6 /* close_red.png */; };
+		B3C7C1AB1C060999006C87EB /* UILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1A91C060999006C87EB /* UILoginViewController.m */; };
+		B3C7C1AC1C060999006C87EB /* UILoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C7C1AA1C060999006C87EB /* UILoginViewController.xib */; };
+		B3C7C1B11C0609A3006C87EB /* UIStudentChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1AF1C0609A3006C87EB /* UIStudentChooserViewController.m */; };
+		B3C7C1B21C0609A3006C87EB /* UIStudentChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C7C1B01C0609A3006C87EB /* UIStudentChooserViewController.xib */; };
+		B3C7C1B61C0609C3006C87EB /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1B51C0609C3006C87EB /* UserManager.m */; };
+		B3C7C1BD1C0609E0006C87EB /* StudentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1B81C0609E0006C87EB /* StudentInfo.m */; };
+		B3C7C1BE1C0609E0006C87EB /* TeacherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1BA1C0609E0006C87EB /* TeacherInfo.m */; };
+		B3C7C1BF1C0609E0006C87EB /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1BC1C0609E0006C87EB /* UserInfo.m */; };
+		B3C7C1CA1C060A12006C87EB /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1C21C060A12006C87EB /* ALView+PureLayout.m */; };
+		B3C7C1CB1C060A12006C87EB /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1C41C060A12006C87EB /* NSArray+PureLayout.m */; };
+		B3C7C1CC1C060A12006C87EB /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1C61C060A12006C87EB /* NSLayoutConstraint+PureLayout.m */; };
+		B3C7C1D01C061027006C87EB /* OHStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1CF1C061027006C87EB /* OHStackView.m */; };
+		B3C7C1D51C06DE71006C87EB /* UIRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1D31C06DE71006C87EB /* UIRegisterViewController.m */; };
+		B3C7C1D61C06DE71006C87EB /* UIRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C7C1D41C06DE71006C87EB /* UIRegisterViewController.xib */; };
+		B3C7C1DB1C06E792006C87EB /* UINewStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C7C1D91C06E792006C87EB /* UINewStudentViewController.m */; };
+		B3C7C1DC1C06E792006C87EB /* UINewStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C7C1DA1C06E792006C87EB /* UINewStudentViewController.xib */; };
 		B3E0CE921BDE4EE5000D6508 /* DefaultImageChooser in Resources */ = {isa = PBXBuildFile; fileRef = B3E0CE911BDE4EE5000D6508 /* DefaultImageChooser */; };
 		B3E0CE961BDF5FBE000D6508 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CE951BDF5FBE000D6508 /* SettingsManager.m */; };
-		B3E0CEAD1BDFAAD9000D6508 /* _OALayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CE9C1BDFAAD9000D6508 /* _OALayoutGuide.m */; };
-		B3E0CEAE1BDFAAD9000D6508 /* OAStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CE9E1BDFAAD9000D6508 /* OAStackView.m */; };
-		B3E0CEAF1BDFAAD9000D6508 /* OAStackView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEA01BDFAAD9000D6508 /* OAStackView+Constraint.m */; };
-		B3E0CEB01BDFAAD9000D6508 /* OAStackView+Hiding.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEA21BDFAAD9000D6508 /* OAStackView+Hiding.m */; };
-		B3E0CEB11BDFAAD9000D6508 /* OAStackView+Traversal.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEA41BDFAAD9000D6508 /* OAStackView+Traversal.m */; };
-		B3E0CEB21BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEA61BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.m */; };
-		B3E0CEB31BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEA81BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.m */; };
-		B3E0CEB41BDFAAD9000D6508 /* OAStackViewDistributionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEAA1BDFAAD9000D6508 /* OAStackViewDistributionStrategy.m */; };
-		B3E0CEB51BDFAAD9000D6508 /* OATransformLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEAC1BDFAAD9000D6508 /* OATransformLayer.m */; };
-		B3E0CEB71BDFAAEE000D6508 /* OAStackView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B3E0CEB61BDFAAEE000D6508 /* OAStackView.podspec */; };
 		B3E0CEBB1BDFBDC5000D6508 /* UIDirectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEBA1BDFBDC5000D6508 /* UIDirectionView.m */; };
-		B3FBED341BE89C06006DBAA8 /* TZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBED301BE89C05006DBAA8 /* TZStackView.swift */; };
-		B3FBED351BE89C06006DBAA8 /* TZStackViewAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBED311BE89C05006DBAA8 /* TZStackViewAlignment.swift */; };
-		B3FBED361BE89C06006DBAA8 /* TZStackViewDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBED321BE89C05006DBAA8 /* TZStackViewDistribution.swift */; };
-		B3FBED3A1BE8A718006DBAA8 /* UIViewAutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBED391BE8A718006DBAA8 /* UIViewAutoLayoutExtension.swift */; };
-		B3FBED3C1BE8A8BD006DBAA8 /* TZSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBED3B1BE8A8BD006DBAA8 /* TZSpacerView.swift */; };
 		B3FBF13F1BEA60EC006DBAA8 /* UISettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FBF13D1BEA60EC006DBAA8 /* UISettingsViewController.m */; };
 		B3FBF1401BEA60EC006DBAA8 /* UISettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FBF13E1BEA60EC006DBAA8 /* UISettingsViewController.xib */; };
 		B3FBF1631BF06EE4006DBAA8 /* UISettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FBF1611BF06EE4006DBAA8 /* UISettingTableViewCell.m */; };
@@ -275,28 +277,41 @@
 		B397F99D1BA00E210077C05F /* Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snake.png; sourceTree = "<group>"; };
 		B397F99E1BA00E210077C05F /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
 		B397F9A21BA00E420077C05F /* Throat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Throat.png; sourceTree = "<group>"; };
+		B3BF66B41C045768001FF8A6 /* close_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_red.png; sourceTree = "<group>"; };
+		B3C7C1A81C060999006C87EB /* UILoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILoginViewController.h; sourceTree = "<group>"; };
+		B3C7C1A91C060999006C87EB /* UILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILoginViewController.m; sourceTree = "<group>"; };
+		B3C7C1AA1C060999006C87EB /* UILoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UILoginViewController.xib; sourceTree = "<group>"; };
+		B3C7C1AE1C0609A3006C87EB /* UIStudentChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIStudentChooserViewController.h; sourceTree = "<group>"; };
+		B3C7C1AF1C0609A3006C87EB /* UIStudentChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIStudentChooserViewController.m; sourceTree = "<group>"; };
+		B3C7C1B01C0609A3006C87EB /* UIStudentChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIStudentChooserViewController.xib; sourceTree = "<group>"; };
+		B3C7C1B41C0609C3006C87EB /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		B3C7C1B51C0609C3006C87EB /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		B3C7C1B71C0609E0006C87EB /* StudentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInfo.h; sourceTree = "<group>"; };
+		B3C7C1B81C0609E0006C87EB /* StudentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInfo.m; sourceTree = "<group>"; };
+		B3C7C1B91C0609E0006C87EB /* TeacherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherInfo.h; sourceTree = "<group>"; };
+		B3C7C1BA1C0609E0006C87EB /* TeacherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherInfo.m; sourceTree = "<group>"; };
+		B3C7C1BB1C0609E0006C87EB /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		B3C7C1BC1C0609E0006C87EB /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		B3C7C1C11C060A12006C87EB /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		B3C7C1C21C060A12006C87EB /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		B3C7C1C31C060A12006C87EB /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		B3C7C1C41C060A12006C87EB /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		B3C7C1C51C060A12006C87EB /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		B3C7C1C61C060A12006C87EB /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		B3C7C1C71C060A12006C87EB /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		B3C7C1C81C060A12006C87EB /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		B3C7C1C91C060A12006C87EB /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		B3C7C1CE1C061027006C87EB /* OHStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHStackView.h; sourceTree = "<group>"; };
+		B3C7C1CF1C061027006C87EB /* OHStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHStackView.m; sourceTree = "<group>"; };
+		B3C7C1D21C06DE71006C87EB /* UIRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIRegisterViewController.h; sourceTree = "<group>"; };
+		B3C7C1D31C06DE71006C87EB /* UIRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIRegisterViewController.m; sourceTree = "<group>"; };
+		B3C7C1D41C06DE71006C87EB /* UIRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIRegisterViewController.xib; sourceTree = "<group>"; };
+		B3C7C1D81C06E792006C87EB /* UINewStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINewStudentViewController.h; sourceTree = "<group>"; };
+		B3C7C1D91C06E792006C87EB /* UINewStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINewStudentViewController.m; sourceTree = "<group>"; };
+		B3C7C1DA1C06E792006C87EB /* UINewStudentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UINewStudentViewController.xib; sourceTree = "<group>"; };
 		B3E0CE911BDE4EE5000D6508 /* DefaultImageChooser */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DefaultImageChooser; sourceTree = "<group>"; };
 		B3E0CE941BDF5FBE000D6508 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
 		B3E0CE951BDF5FBE000D6508 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
-		B3E0CE9B1BDFAAD9000D6508 /* _OALayoutGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _OALayoutGuide.h; sourceTree = "<group>"; };
-		B3E0CE9C1BDFAAD9000D6508 /* _OALayoutGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _OALayoutGuide.m; sourceTree = "<group>"; };
-		B3E0CE9D1BDFAAD9000D6508 /* OAStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAStackView.h; sourceTree = "<group>"; };
-		B3E0CE9E1BDFAAD9000D6508 /* OAStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAStackView.m; sourceTree = "<group>"; };
-		B3E0CE9F1BDFAAD9000D6508 /* OAStackView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAStackView+Constraint.h"; sourceTree = "<group>"; };
-		B3E0CEA01BDFAAD9000D6508 /* OAStackView+Constraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAStackView+Constraint.m"; sourceTree = "<group>"; };
-		B3E0CEA11BDFAAD9000D6508 /* OAStackView+Hiding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAStackView+Hiding.h"; sourceTree = "<group>"; };
-		B3E0CEA21BDFAAD9000D6508 /* OAStackView+Hiding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAStackView+Hiding.m"; sourceTree = "<group>"; };
-		B3E0CEA31BDFAAD9000D6508 /* OAStackView+Traversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAStackView+Traversal.h"; sourceTree = "<group>"; };
-		B3E0CEA41BDFAAD9000D6508 /* OAStackView+Traversal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAStackView+Traversal.m"; sourceTree = "<group>"; };
-		B3E0CEA51BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAStackViewAlignmentStrategy.h; sourceTree = "<group>"; };
-		B3E0CEA61BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAStackViewAlignmentStrategy.m; sourceTree = "<group>"; };
-		B3E0CEA71BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAStackViewAlignmentStrategyBaseline.h; sourceTree = "<group>"; };
-		B3E0CEA81BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAStackViewAlignmentStrategyBaseline.m; sourceTree = "<group>"; };
-		B3E0CEA91BDFAAD9000D6508 /* OAStackViewDistributionStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAStackViewDistributionStrategy.h; sourceTree = "<group>"; };
-		B3E0CEAA1BDFAAD9000D6508 /* OAStackViewDistributionStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAStackViewDistributionStrategy.m; sourceTree = "<group>"; };
-		B3E0CEAB1BDFAAD9000D6508 /* OATransformLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATransformLayer.h; sourceTree = "<group>"; };
-		B3E0CEAC1BDFAAD9000D6508 /* OATransformLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATransformLayer.m; sourceTree = "<group>"; };
-		B3E0CEB61BDFAAEE000D6508 /* OAStackView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OAStackView.podspec; sourceTree = "<group>"; };
 		B3E0CEB91BDFBDC5000D6508 /* UIDirectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDirectionView.h; sourceTree = "<group>"; };
 		B3E0CEBA1BDFBDC5000D6508 /* UIDirectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDirectionView.m; sourceTree = "<group>"; };
 		B3FBED301BE89C05006DBAA8 /* TZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackView.swift; sourceTree = "<group>"; };
@@ -343,6 +358,7 @@
 		482AC5E21B15D87600EF2634 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3BF66B31C0456E2001FF8A6 /* Main */,
 				B3E0CE911BDE4EE5000D6508 /* DefaultImageChooser */,
 				B397F9A11BA00E290077C05F /* Throat */,
 				B397F99C1BA00E060077C05F /* SyllabeTyme */,
@@ -404,6 +420,12 @@
 		4882D4B01B0A2A93004786A3 /* Element */ = {
 			isa = PBXGroup;
 			children = (
+				B3C7C1B71C0609E0006C87EB /* StudentInfo.h */,
+				B3C7C1B81C0609E0006C87EB /* StudentInfo.m */,
+				B3C7C1B91C0609E0006C87EB /* TeacherInfo.h */,
+				B3C7C1BA1C0609E0006C87EB /* TeacherInfo.m */,
+				B3C7C1BB1C0609E0006C87EB /* UserInfo.h */,
+				B3C7C1BC1C0609E0006C87EB /* UserInfo.m */,
 				4882D4B11B0A2AC2004786A3 /* Element.h */,
 				4882D4B21B0A2AC2004786A3 /* Element.m */,
 				4882D4B41B0A2BA8004786A3 /* FeatureInfo.h */,
@@ -475,6 +497,7 @@
 		488975181B0092EA00E63E90 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				B3C7C1B31C0609C3006C87EB /* User */,
 				B3E0CE931BDF5F9E000D6508 /* Settings */,
 				B31F36AF1BCE5EB6004BFBAC /* Dictionnary */,
 				B397F9841B9EF22A0077C05F /* Grammar */,
@@ -500,6 +523,10 @@
 		4889751A1B00931100E63E90 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B3C7C1D71C06E770006C87EB /* NewStudent */,
+				B3C7C1D11C06DE4D006C87EB /* Register */,
+				B3C7C1A71C060999006C87EB /* Login */,
+				B3C7C1AD1C0609A3006C87EB /* StudentChooser */,
 				B3FBF13B1BEA60CD006DBAA8 /* Settings */,
 				B38DC2EC1BDD2F2C0094D9C0 /* ImageNewWord */,
 				B38DC2E61BDD0C640094D9C0 /* AddWord */,
@@ -529,9 +556,10 @@
 		4889751C1B00940F00E63E90 /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
+				B3C7C1CD1C060FEF006C87EB /* OHStackView */,
+				B3C7C1C01C060A12006C87EB /* PureLayout */,
 				B3FBED381BE8A700006DBAA8 /* AutoLayoutExtension */,
 				B3FBED2E1BE89C05006DBAA8 /* TZStackView */,
-				B3E0CE9A1BDFAAC0000D6508 /* OAStackView */,
 				B32849251BD7D22F00A945C2 /* serialize */,
 				4882D4951B08FBDB004786A3 /* ZoomableView */,
 				487A5C5B1B038A7E00FBF464 /* DraggableView */,
@@ -764,6 +792,88 @@
 			path = Throat;
 			sourceTree = "<group>";
 		};
+		B3BF66B31C0456E2001FF8A6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B3BF66B41C045768001FF8A6 /* close_red.png */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B3C7C1A71C060999006C87EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1A81C060999006C87EB /* UILoginViewController.h */,
+				B3C7C1A91C060999006C87EB /* UILoginViewController.m */,
+				B3C7C1AA1C060999006C87EB /* UILoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B3C7C1AD1C0609A3006C87EB /* StudentChooser */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1AE1C0609A3006C87EB /* UIStudentChooserViewController.h */,
+				B3C7C1AF1C0609A3006C87EB /* UIStudentChooserViewController.m */,
+				B3C7C1B01C0609A3006C87EB /* UIStudentChooserViewController.xib */,
+			);
+			path = StudentChooser;
+			sourceTree = "<group>";
+		};
+		B3C7C1B31C0609C3006C87EB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1B41C0609C3006C87EB /* UserManager.h */,
+				B3C7C1B51C0609C3006C87EB /* UserManager.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B3C7C1C01C060A12006C87EB /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1C11C060A12006C87EB /* ALView+PureLayout.h */,
+				B3C7C1C21C060A12006C87EB /* ALView+PureLayout.m */,
+				B3C7C1C31C060A12006C87EB /* NSArray+PureLayout.h */,
+				B3C7C1C41C060A12006C87EB /* NSArray+PureLayout.m */,
+				B3C7C1C51C060A12006C87EB /* NSLayoutConstraint+PureLayout.h */,
+				B3C7C1C61C060A12006C87EB /* NSLayoutConstraint+PureLayout.m */,
+				B3C7C1C71C060A12006C87EB /* PureLayout+Internal.h */,
+				B3C7C1C81C060A12006C87EB /* PureLayout.h */,
+				B3C7C1C91C060A12006C87EB /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		B3C7C1CD1C060FEF006C87EB /* OHStackView */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1CE1C061027006C87EB /* OHStackView.h */,
+				B3C7C1CF1C061027006C87EB /* OHStackView.m */,
+			);
+			path = OHStackView;
+			sourceTree = "<group>";
+		};
+		B3C7C1D11C06DE4D006C87EB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1D21C06DE71006C87EB /* UIRegisterViewController.h */,
+				B3C7C1D31C06DE71006C87EB /* UIRegisterViewController.m */,
+				B3C7C1D41C06DE71006C87EB /* UIRegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		B3C7C1D71C06E770006C87EB /* NewStudent */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7C1D81C06E792006C87EB /* UINewStudentViewController.h */,
+				B3C7C1D91C06E792006C87EB /* UINewStudentViewController.m */,
+				B3C7C1DA1C06E792006C87EB /* UINewStudentViewController.xib */,
+			);
+			path = NewStudent;
+			sourceTree = "<group>";
+		};
 		B3E0CE931BDF5F9E000D6508 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,32 +881,6 @@
 				B3E0CE951BDF5FBE000D6508 /* SettingsManager.m */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		B3E0CE9A1BDFAAC0000D6508 /* OAStackView */ = {
-			isa = PBXGroup;
-			children = (
-				B3E0CEB61BDFAAEE000D6508 /* OAStackView.podspec */,
-				B3E0CE9B1BDFAAD9000D6508 /* _OALayoutGuide.h */,
-				B3E0CE9C1BDFAAD9000D6508 /* _OALayoutGuide.m */,
-				B3E0CE9D1BDFAAD9000D6508 /* OAStackView.h */,
-				B3E0CE9E1BDFAAD9000D6508 /* OAStackView.m */,
-				B3E0CE9F1BDFAAD9000D6508 /* OAStackView+Constraint.h */,
-				B3E0CEA01BDFAAD9000D6508 /* OAStackView+Constraint.m */,
-				B3E0CEA11BDFAAD9000D6508 /* OAStackView+Hiding.h */,
-				B3E0CEA21BDFAAD9000D6508 /* OAStackView+Hiding.m */,
-				B3E0CEA31BDFAAD9000D6508 /* OAStackView+Traversal.h */,
-				B3E0CEA41BDFAAD9000D6508 /* OAStackView+Traversal.m */,
-				B3E0CEA51BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.h */,
-				B3E0CEA61BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.m */,
-				B3E0CEA71BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.h */,
-				B3E0CEA81BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.m */,
-				B3E0CEA91BDFAAD9000D6508 /* OAStackViewDistributionStrategy.h */,
-				B3E0CEAA1BDFAAD9000D6508 /* OAStackViewDistributionStrategy.m */,
-				B3E0CEAB1BDFAAD9000D6508 /* OATransformLayer.h */,
-				B3E0CEAC1BDFAAD9000D6508 /* OATransformLayer.m */,
-			);
-			path = OAStackView;
 			sourceTree = "<group>";
 		};
 		B3E0CEB81BDFBDA5000D6508 /* DirectionView */ = {
@@ -878,6 +962,7 @@
 				TargetAttributes = {
 					488974EE1B00928300E63E90 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = N7M2C6TNEQ;
 					};
 				};
 			};
@@ -930,13 +1015,16 @@
 				B382772A1B5BCE5A0054DB9F /* Mouth-18@2x.png in Resources */,
 				488A73F41B15E3C90047876F /* Colors-03.png in Resources */,
 				B397F9981BA00DEC0077C05F /* Shapes-02.png in Resources */,
+				B3C7C1B21C0609A3006C87EB /* UIStudentChooserViewController.xib in Resources */,
 				B38277241B5BCE5A0054DB9F /* Mouth-07.png in Resources */,
 				4815A5981B0B179D00DF8C80 /* UIFeatureTableViewCell.xib in Resources */,
+				B3BF66B51C045768001FF8A6 /* close_red.png in Resources */,
 				488A73F31B15E3C90047876F /* Colors-02.png in Resources */,
 				488A73FD1B15E3C90047876F /* Colors-12.png in Resources */,
 				4882D4AC1B0A261C004786A3 /* UIFeatureViewController.xib in Resources */,
 				B38277321B5BCE5A0054DB9F /* Mouth-06@2x.png in Resources */,
 				488975031B00928400E63E90 /* LaunchScreen.xib in Resources */,
+				B3C7C1DC1C06E792006C87EB /* UINewStudentViewController.xib in Resources */,
 				B38DC2EB1BDD0C900094D9C0 /* UINewWordViewController.xib in Resources */,
 				488A73F51B15E3C90047876F /* Colors-04.png in Resources */,
 				B382772D1B5BCE5A0054DB9F /* Mouth-16@2x.png in Resources */,
@@ -945,12 +1033,12 @@
 				B38277201B5BCE5A0054DB9F /* Mouth-03.png in Resources */,
 				488A74041B15EC500047876F /* arrow-down-icon.png in Resources */,
 				488A74061B15EC550047876F /* arrow-up-icon.png in Resources */,
+				B3C7C1AC1C060999006C87EB /* UILoginViewController.xib in Resources */,
 				B3FFD10C1B5F6FC100216E5F /* UIMagnetView.xib in Resources */,
 				4882D4A71B0A2299004786A3 /* UIMagnetBoardViewController.xib in Resources */,
 				488A73F61B15E3C90047876F /* Colors-05.png in Resources */,
 				488975001B00928400E63E90 /* Images.xcassets in Resources */,
 				B397F9A01BA00E210077C05F /* Sparkle.png in Resources */,
-				B3E0CEB71BDFAAEE000D6508 /* OAStackView.podspec in Resources */,
 				B382771F1B5BCE5A0054DB9F /* Mouth-02.png in Resources */,
 				488A73F71B15E3C90047876F /* Colors-06.png in Resources */,
 				B382771E1B5BCE550054DB9F /* Mouth-01.png in Resources */,
@@ -972,6 +1060,7 @@
 				B38277331B5BCE5A0054DB9F /* Mouth-08@2x.png in Resources */,
 				B382772B1B5BCE5A0054DB9F /* Mouth-19@2x.png in Resources */,
 				B38277231B5BCE5A0054DB9F /* Mouth-06.png in Resources */,
+				B3C7C1D61C06DE71006C87EB /* UIRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,52 +1071,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C7C1B11C0609A3006C87EB /* UIStudentChooserViewController.m in Sources */,
 				48D6E4161B1B6B840058EE2C /* FeaturesManager.m in Sources */,
 				488975261B00944A00E63E90 /* UIViewController-Nib.m in Sources */,
-				B3E0CEB11BDFAAD9000D6508 /* OAStackView+Traversal.m in Sources */,
 				B397F9871B9EF2720077C05F /* GrammarLogic.m in Sources */,
 				488974FB1B00928400E63E90 /* ViewController.m in Sources */,
 				488974F81B00928400E63E90 /* AppDelegate.m in Sources */,
 				4869881B1B022ACF0081A0F9 /* NSObject-Utility.m in Sources */,
 				489962291B301E3C0086AAE8 /* UIZoomableView.m in Sources */,
+				B3C7C1BE1C0609E0006C87EB /* TeacherInfo.m in Sources */,
 				488975251B00944A00E63E90 /* UIView-Nib.m in Sources */,
 				489962281B301E3C0086AAE8 /* UIZoomableDraggableView.m in Sources */,
+				B3C7C1AB1C060999006C87EB /* UILoginViewController.m in Sources */,
 				B3E0CEBB1BDFBDC5000D6508 /* UIDirectionView.m in Sources */,
 				B3FBF1691BF0762A006DBAA8 /* Constants.m in Sources */,
 				4889752A1B00C02500E63E90 /* viewLogic.m in Sources */,
-				B3FBED3C1BE8A8BD006DBAA8 /* TZSpacerView.swift in Sources */,
+				B3C7C1BF1C0609E0006C87EB /* UserInfo.m in Sources */,
+				B3C7C1CA1C060A12006C87EB /* ALView+PureLayout.m in Sources */,
 				48D6E4191B1B6C980058EE2C /* MouthInfo.m in Sources */,
+				B3C7C1BD1C0609E0006C87EB /* StudentInfo.m in Sources */,
 				4882D4AB1B0A261C004786A3 /* UIFeatureViewController.m in Sources */,
+				B3C7C1DB1C06E792006C87EB /* UINewStudentViewController.m in Sources */,
 				489962271B301E3C0086AAE8 /* UIDraggableView.m in Sources */,
+				B3C7C1CC1C060A12006C87EB /* NSLayoutConstraint+PureLayout.m in Sources */,
 				488975241B00944A00E63E90 /* UIView-Additions.m in Sources */,
 				4882D4981B08FBFD004786A3 /* UIView+Zoomable.m in Sources */,
+				B3C7C1B61C0609C3006C87EB /* UserManager.m in Sources */,
 				4882D4A61B0A2299004786A3 /* UIMagnetBoardViewController.m in Sources */,
-				B3E0CEB21BDFAAD9000D6508 /* OAStackViewAlignmentStrategy.m in Sources */,
+				B3C7C1CB1C060A12006C87EB /* NSArray+PureLayout.m in Sources */,
 				B397F98D1B9F032E0077C05F /* SyllableTimeInfo.m in Sources */,
+				B3C7C1D51C06DE71006C87EB /* UIRegisterViewController.m in Sources */,
 				486988181B0227BB0081A0F9 /* Shared.m in Sources */,
 				B3FBF13F1BEA60EC006DBAA8 /* UISettingsViewController.m in Sources */,
 				B397F9901B9F03A90077C05F /* ThroatInfo.m in Sources */,
 				B32849281BD7D24900A945C2 /* BaseSerializeData.m in Sources */,
-				B3FBED341BE89C06006DBAA8 /* TZStackView.swift in Sources */,
 				B3FBF1631BF06EE4006DBAA8 /* UISettingTableViewCell.m in Sources */,
-				B3E0CEB51BDFAAD9000D6508 /* OATransformLayer.m in Sources */,
-				B3E0CEAF1BDFAAD9000D6508 /* OAStackView+Constraint.m in Sources */,
-				B3E0CEB31BDFAAD9000D6508 /* OAStackViewAlignmentStrategyBaseline.m in Sources */,
 				B38277381B5BD56F0054DB9F /* ColorInfo.m in Sources */,
 				4815A5971B0B179D00DF8C80 /* UIFeatureTableViewCell.m in Sources */,
 				B3FBF1671BF07019006DBAA8 /* SettingsInfo.m in Sources */,
-				B3FBED361BE89C06006DBAA8 /* TZStackViewDistribution.swift in Sources */,
-				B3FBED3A1BE8A718006DBAA8 /* UIViewAutoLayoutExtension.swift in Sources */,
 				B3E0CE961BDF5FBE000D6508 /* SettingsManager.m in Sources */,
-				B3FBED351BE89C06006DBAA8 /* TZStackViewAlignment.swift in Sources */,
-				B3E0CEB01BDFAAD9000D6508 /* OAStackView+Hiding.m in Sources */,
+				B3C7C1D01C061027006C87EB /* OHStackView.m in Sources */,
 				B38DC2F01BDD2F640094D9C0 /* UIImageChooserViewController.m in Sources */,
 				B397F98A1B9F024D0077C05F /* VowelInfo.m in Sources */,
 				B31F36B51BCE5F43004BFBAC /* WordInfo.m in Sources */,
 				B38DC2EA1BDD0C8F0094D9C0 /* UINewWordViewController.m in Sources */,
 				B382774B1B5D3F8A0054DB9F /* UIBaseFeaturesView.m in Sources */,
 				4882D4B61B0A2BA8004786A3 /* FeatureInfo.m in Sources */,
-				B3E0CEAE1BDFAAD9000D6508 /* OAStackView.m in Sources */,
 				B31F36B21BCE5EDA004BFBAC /* DictionnaryManager.m in Sources */,
 				B31F36AD1BCE5E84004BFBAC /* UIDictionnaryTableViewCell.m in Sources */,
 				4882D4B31B0A2AC2004786A3 /* Element.m in Sources */,
@@ -1037,9 +1126,7 @@
 				4899622C1B30239C0086AAE8 /* UITemplateView.m in Sources */,
 				B382774D1B5D3F8A0054DB9F /* UIFeatureView.m in Sources */,
 				487A5C611B038AB800FBF464 /* UIView+draggable.m in Sources */,
-				B3E0CEAD1BDFAAD9000D6508 /* _OALayoutGuide.m in Sources */,
 				B3FFD10A1B5F6F8900216E5F /* UIMagnetView.m in Sources */,
-				B3E0CEB41BDFAAD9000D6508 /* OAStackViewDistributionStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,9 +1230,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/base/SupportingFiles/BasePrefixHeader.pch";
 				INFOPLIST_FILE = base/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1156,9 +1245,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/base/SupportingFiles/BasePrefixHeader.pch";
 				INFOPLIST_FILE = base/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;

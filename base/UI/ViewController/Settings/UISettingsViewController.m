@@ -37,6 +37,20 @@
     directionSettingInfo.settingsType = directionSettingsType;
     
     [_settings addObject:directionSettingInfo];
+    
+    SettingsInfo *studentLogoutSettingInfo = [[SettingsInfo alloc] init];
+    
+    studentLogoutSettingInfo.title = [NSString stringWithFormat:NLS(@"Logout student - %@"),     [[UserManager sharedInstance] currentStudent].name];
+    studentLogoutSettingInfo.settingsType = studentLogoutSettingsType;
+    
+    [_settings addObject:studentLogoutSettingInfo];
+    
+    SettingsInfo *teacherLogoutSettingInfo = [[SettingsInfo alloc] init];
+    
+    teacherLogoutSettingInfo.title = [NSString stringWithFormat:NLS(@"Logout teacher - %@"),     [[UserManager sharedInstance] currentTeacher].name];
+    teacherLogoutSettingInfo.settingsType = teacherLogoutSettingsType;
+    
+    [_settings addObject:teacherLogoutSettingInfo];
 }
 
 - (void)layoutData
@@ -75,6 +89,12 @@
     {
         case directionSettingsType:
             [SettingsManager sharedInstance].directionReadType ++;
+            break;
+        case studentLogoutSettingsType:
+            [[UserManager sharedInstance] logoutStudent];
+            break;
+        case teacherLogoutSettingsType:
+            [[UserManager sharedInstance] logoutTeacher];
             break;
             
         default:

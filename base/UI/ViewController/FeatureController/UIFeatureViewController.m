@@ -57,11 +57,11 @@
     {
         subMenu.featureInfos = [[FeaturesManager sharedInstance] vowels];
     }
-    else if ([featureInfo.title containsString:@"yllable"])//syllable
+    else if ([featureInfo.title containsString:@"tion"])//continuation
     {
         subMenu.featureInfos = [[FeaturesManager sharedInstance] syllables];
     }
-    else if ([featureInfo.title containsString:@"hroat"])//throat
+    else if ([featureInfo.title containsString:@"oice"])//voice
     {
         subMenu.featureInfos = [[FeaturesManager sharedInstance] throat];
     }

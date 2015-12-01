@@ -30,6 +30,9 @@ static viewLogic *sharedInstance = nil;
     
     if (self)
     {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logedIn:) name:TEACHER_STATUS_NOTIFICATION object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(studentChoosed:) name:STUDENT_STATUS_NOTIFICATION object:nil];
     }
     
     return self;
@@ -42,17 +45,63 @@ static viewLogic *sharedInstance = nil;
 
 - (void)applicationLaunched
 {
-    [self presentMainViewController];
+    //[self presentMainViewController];
+    [self presentViewAccordingToUserStatus];
     return;
+}
+
+- (void)presentViewAccordingToUserStatus
+{
+    if ([[UserManager sharedInstance] teacherLogedIn])
+    {
+        if ([[UserManager sharedInstance] studentLogedIn])
+        {
+            [self presentMainViewController];
+        }
+        else
+        {
+            [self presentStudentChooserViewController];
+        }
+    }
+    else
+    {
+        [self presentLoginViewController];
+    }
 }
 
 - (void)presentMainViewController
 {
-    if (!_magnetBoardViewController)
-    {
-        _magnetBoardViewController = [UIMagnetBoardViewController loadFromNib];
-    }
+    _magnetBoardViewController = [UIMagnetBoardViewController loadFromNib];
     [self presentViewController:_magnetBoardViewController animated:NO onWindow:YES completion:nil];
+}
+
+- (void)presentLoginViewController
+{
+    UILoginViewController *loginVC = [UILoginViewController loadFromNib];
+    
+    [self presentViewController:loginVC animated:NO onWindow:YES completion:nil];
+}
+
+- (void)presentRegisterModalViewController
+{
+    UIRegisterViewController *loginVC = [UIRegisterViewController loadFromNib];
+    loginVC.modalPresentationStyle = UIModalPresentationFormSheet;
+    [[self currentViewController] presentViewController:loginVC animated:YES completion:nil];
+}
+
+- (void)presentNewStudentModalViewController
+{
+    UINewStudentViewController *loginVC = [UINewStudentViewController loadFromNib];
+    loginVC.modalPresentationStyle = UIModalPresentationFormSheet;
+    [[self currentViewController] presentViewController:loginVC animated:YES completion:nil];
+}
+
+- (void)presentStudentChooserViewController
+{
+    UIStudentChooserViewController *studentChooserVC = [UIStudentChooserViewController loadFromNib];
+    studentChooserVC.students = [[[UserManager sharedInstance] currentTeacher] students];
+    
+    [self presentViewController:studentChooserVC animated:NO onWindow:YES completion:nil];
 }
 
 - (void)presentModalViewController:(UIViewController *)viewController
@@ -82,6 +131,21 @@ static viewLogic *sharedInstance = nil;
 - (UIMagnetBoardViewController *)magnetBoardViewController
 {
     return _magnetBoardViewController;
+}
+
+- (void)logedIn:(NSNotification *)notification
+{
+    [self presentViewAccordingToUserStatus];
+}
+
+- (void)logedOut:(NSNotification *)notification
+{
+    [self presentViewAccordingToUserStatus];
+}
+
+- (void)studentChoosed:(NSNotification *)notification
+{
+    [self presentViewAccordingToUserStatus];
 }
 
 @end

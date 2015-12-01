@@ -28,6 +28,64 @@ static DictionnaryManager *sharedInstance = nil;
     return sharedInstance;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
++ (NSString *)pathForSave
+{
+    NSMutableString *pathSave = [[self class] dictionnaryPath];
+   
+    if ([[UserManager sharedInstance] currentStudent])
+    {
+        [pathSave appendFormat:@"/%@", [[UserManager sharedInstance] currentStudent].name];
+    }
+    else
+    {
+        [pathSave appendFormat:@"/defaultStudent"];
+    }
+    return pathSave;
+}
+
++ (NSMutableString *)dictionnaryPath
+{
+    NSMutableString *dictionnaryPath = [NSMutableString stringWithFormat:@"%@/Documents/%@",NSHomeDirectory(), NSStringFromClass([self class])];
+    if ([[UserManager sharedInstance] currentTeacher])
+    {
+        [dictionnaryPath appendFormat:@"/%@", [[UserManager sharedInstance] currentTeacher].name];
+    }
+    else
+    {
+        [dictionnaryPath appendFormat:@"/defaultTeacher"];
+
+    }
+
+    return dictionnaryPath;
+}
+
+- (void) save
+{
+    NSString *path = [[self class] pathForSave];
+    NSString *dictionnaryPath = [[self class] dictionnaryPath];
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
+    NSFileManager *fManager = [NSFileManager defaultManager];
+    if ([fManager fileExistsAtPath:path])
+    {
+        [fManager removeItemAtPath:path error:nil];
+    }
+    BOOL isDirectory = NO;
+    NSError *error = nil;
+
+    if (![fManager fileExistsAtPath:dictionnaryPath isDirectory:&isDirectory])
+    {
+        [fManager createDirectoryAtPath:dictionnaryPath withIntermediateDirectories:YES attributes:nil error:&error];
+    }
+    
+    [fManager createFileAtPath:path contents:data attributes:nil];
+}
+
 - (id)init
 {
     if (self = [super init])
@@ -62,6 +120,10 @@ static DictionnaryManager *sharedInstance = nil;
     {
         _words = [NSMutableArray array];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logedOut:) name:TEACHER_STATUS_NOTIFICATION object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(studentChoosed:) name:STUDENT_STATUS_NOTIFICATION object:nil];
 }
 
 - (NSArray *)words
@@ -75,6 +137,16 @@ static DictionnaryManager *sharedInstance = nil;
     [self save];
     
     return YES;
+}
+
+- (void)logedOut:(NSNotification *)notification
+{
+    sharedInstance = nil;
+}
+
+- (void)studentChoosed:(NSNotification *)notification
+{
+    sharedInstance = nil;
 }
 
 @end

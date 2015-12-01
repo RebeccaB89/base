@@ -22,7 +22,7 @@
 + (UIMagnetView *)magnetViewForSuperView:(UIView *)superView removeFromSuperView:(BOOL)removeFromSuperView inPoint:(CGPoint)point
 {
     UIMagnetView *magnetView = [UIMagnetView loadFromNib];
-    magnetView.origin = point;
+    magnetView.origin = CGPointMake(point.x - magnetView.mainView.origin.x, point.y - magnetView.mainView.origin.y);
     [superView addSubview:magnetView];
     NSMutableArray *viewToRemove = [NSMutableArray array];
     for (UIView *placeholder in superView.subviews)
@@ -42,10 +42,15 @@
         UIView *goodMagnet = nil;
         for (UIView *placeholder in magnetView.subviews)
         {
+            if (placeholder.tag >= 100)
+            {
+                continue;
+            }
+            
             CGRect magnetFrame = [superView convertRect:placeholder.frame fromView:magnetView];
             CGFloat percent = [UIMagnetView percentOfIntersectionWithRect:magnetFrame withRect2:subview.frame];
             //percent = percent/magnetViews.tag; //factor
-            if (percent > bigPercent && placeholder.subviews.count == 0 && placeholder.tag < 100)
+            if (percent > bigPercent && placeholder.subviews.count == 0)
             {
                 bigPercent = percent;
                 goodMagnet = placeholder;
@@ -64,6 +69,8 @@
             [draggableView setDraggable:NO];
             UIZoomableView *zoomableView = (UIZoomableView *)subview;
             [zoomableView setZoomable:NO];
+            UITemplateView *templateView = (UITemplateView *)subview;
+            templateView.deletable = NO;
             [goodMagnet addSubview:subview];
             [viewToRemove addObject:subview];
         }
@@ -97,6 +104,9 @@
         UIZoomableView *zoomableView = (UIZoomableView *)subview;
         [zoomableView setZoomable:YES];
 
+        UITemplateView *templateView = (UITemplateView *)subview;
+        templateView.deletable = YES;
+        
         if ([zoomableView isKindOfClass:[UIZoomableView class]] || [zoomableView isKindOfClass:[UIZoomableDraggableView class]] )
         {
             CGRect subviewFrame =  [magnetView convertRect:placeHolder.frame toView:magnetView.superview];
@@ -155,6 +165,21 @@
     self.selectionDisplay = YES;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    for (UIView *placeholder in self.subviews)
+    {
+        placeholder.backgroundColor = [UIColor clearColor];
+
+        if (placeholder.subviews.count > 0 && (placeholder.tag == 3 || placeholder.tag == 5 || placeholder.tag == 4))
+        {
+            placeholder.backgroundColor = [UIColor whiteColor];
+        }
+    }
+}
+
 - (void)setSelectionDisplay:(BOOL)selectionDisplay
 {
     _selectionDisplay = selectionDisplay;
@@ -210,6 +235,7 @@
     [draggableView setDraggable:NO];
     UIZoomableView *zoomableView = (UIZoomableView *)tempTemplateView;
     [zoomableView setZoomable:NO];
+    tempTemplateView.deletable = NO;
     
     [subview addSubview:tempTemplateView];
 }
@@ -227,6 +253,7 @@
         [draggableView setDraggable:NO];
         UIZoomableView *zoomableView = (UIZoomableView *)templateView;
         [zoomableView setZoomable:NO];
+        templateView.deletable = NO;
 
         [_throatView addSubview:templateView];
     }
@@ -242,7 +269,7 @@
         [draggableView setDraggable:NO];
         UIZoomableView *zoomableView = (UIZoomableView *)templateView;
         [zoomableView setZoomable:NO];
-
+        templateView.deletable = NO;
         
         [_mainView addSubview:templateView];
     }
@@ -258,6 +285,7 @@
         [draggableView setDraggable:NO];
         UIZoomableView *zoomableView = (UIZoomableView *)templateView;
         [zoomableView setZoomable:NO];
+        templateView.deletable = NO;
 
         [_vowelView addSubview:templateView];
     }
@@ -273,6 +301,7 @@
         [draggableView setDraggable:NO];
         UIZoomableView *zoomableView = (UIZoomableView *)templateView;
         [zoomableView setZoomable:NO];
+        templateView.deletable = NO;
         
         [_soundView addSubview:templateView];
     }
@@ -312,24 +341,23 @@
 {
     if (_selectionDisplay)
     {
-        self.layer.borderWidth = 3.0;
-        self.layer.borderColor = [UIColor blackColor].CGColor;
-        self.layer.cornerRadius = 30.0;
+        _mainView.layer.borderWidth = 3.0;
+        _mainView.layer.borderColor = [UIColor blackColor].CGColor;
     }
     else
     {
-        self.layer.borderWidth = 0.0;
-        self.layer.borderColor = [UIColor clearColor].CGColor;
-        self.layer.cornerRadius = 00.0;
+        _mainView.layer.borderWidth = 0.0;
+        _mainView.layer.borderColor = [UIColor clearColor].CGColor;
+        _mainView.layer.cornerRadius = 00.0;
     }
     if (_isSelected)
     {
-        self.layer.borderColor = [UIColor blueColor].CGColor;
+        _mainView.layer.borderColor = [UIColor blueColor].CGColor;
 
     }
     else
     {
-        self.layer.borderColor = [UIColor blackColor].CGColor;
+        _mainView.layer.borderColor = [UIColor blackColor].CGColor;
     }
 }
 
@@ -378,6 +406,7 @@
         UITemplateView *templateView = [UITemplateView loadFromNib];
         templateView.frame = subview.bounds;
         templateView.featureInfo = feature;
+        templateView.deletable = NO;
         [subview addSubview:templateView];
     }
 }

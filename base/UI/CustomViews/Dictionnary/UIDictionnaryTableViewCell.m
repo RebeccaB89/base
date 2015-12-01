@@ -21,21 +21,35 @@
     
     if (!_stackView && subviews.count > 0)
     {
-        _stackView = [[TZStackView alloc] initWithArrangedSubviews:subviews];
-        _stackView.axis = UILayoutConstraintAxisHorizontal;
-        _stackView.distribution = TZStackViewDistributionFillEqually;
-        _stackView.alignment = TZStackViewAlignmentCenter;
-
-        _stackView.spacing = 5;
-        _stackView.translatesAutoresizingMaskIntoConstraints = NO;
+        _stackView = [[OHStackView alloc] init];
+        _stackView.frame = _magnetPlaceholder.bounds;
+        _stackView.spacing = CGSizeMake(5, 0);
+        _stackView.horizontalAlignment = OHStackAlignmentStackFirstEdges;
+        _stackView.verticalAlignment = OHStackAlignmentAlignFirstEdges;
         
         [_magnetPlaceholder addSubview:_stackView];
         
-        CGFloat paddingStrech = subviews.count > 1 ? 0 : 30;
-        [_magnetPlaceholder addConstraints:[_stackView stretchToHeightOfSuperView]];
-        [_magnetPlaceholder addConstraints:[_stackView stretchToWidthOfSuperView:paddingStrech]];
-        [_magnetPlaceholder addConstraints:[_stackView centerHorizontallyTo:_magnetPlaceholder]];
-        [_magnetPlaceholder addConstraints:[_stackView centerVerticallyTo:_magnetPlaceholder]];
+        [_stackView autoPinEdgesToSuperviewEdges];
+        [_stackView autoCenterInSuperview];
+
+        [_stackView autoPinEdgesToSuperviewEdges];
+        [_stackView autoCenterInSuperview];
+    }
+    
+    [_stackView removeAllSubviews];
+    
+    int divide = subviews.count > 0 ? subviews.count : 1;
+    CGFloat widthItem = (_stackView.width / divide) - (_stackView.spacing.width * (subviews.count - 1));
+    
+    for (UIView *subview in subviews)
+    {
+        //subview.frame = _stackView.bounds;
+        if (widthItem < subview.width )
+        {
+            subview.width = widthItem;
+        }
+        subview.height = _stackView.height;
+        [_stackView addSubview:subview];
     }
 }
 
@@ -81,7 +95,6 @@
     
     _titleLabel.text = _wordInfo.title;
     NSString *s = _wordInfo.imagePath;
-    NSLog(s);
     _imageView.image = [UIImage imageWithContentsOfFile:_wordInfo.imagePath];
     [self initStackView:_magnetViews];
 }
