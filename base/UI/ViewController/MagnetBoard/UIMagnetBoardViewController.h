@@ -12,8 +12,9 @@
 #import "UITemplateView.h"
 #import "UIMagnetView.h"
 #import "UINewWordViewController.h"
-
-@interface UIMagnetBoardViewController : UIViewController <UIPopoverControllerDelegate, UITopMenuViewDelegate, UIFeatureViewControllerDelegate, UINewWordViewControllerDelegate>
+#import "UIDictionnaryViewController.h"
+#import "UIWordView.h"
+@interface UIMagnetBoardViewController : UIViewController <UIPopoverControllerDelegate, UITopMenuViewDelegate, UIFeatureViewControllerDelegate, UINewWordViewControllerDelegate, UIDictionnaryViewControllerDelegate>
 {
     __weak IBOutlet UIView *_topMenuPlaceHolder;
     
@@ -24,6 +25,7 @@
     UIPopoverController *_popover;
     
     UITemplateView *_chosenTemplateView;
+    UIWordView *_wordChoosenView;
 }
 
 - (NSArray *)magnetsSelected;

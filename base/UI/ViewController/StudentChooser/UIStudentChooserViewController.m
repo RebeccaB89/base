@@ -20,10 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _chooserButton.layer.cornerRadius = 10.0f;
-    [_chooserButton setTitle:NLS(@"Choose student") forState:UIControlStateNormal];
+    [_chooserButton setTitle:NLS(@"Choose patient") forState:UIControlStateNormal];
     
     _addButton.layer.cornerRadius = 10.0f;
-    [_addButton setTitle:NLS(@"Add student") forState:UIControlStateNormal];
+    [_addButton setTitle:NLS(@"Add new patient") forState:UIControlStateNormal];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(studentsChanged:) name:STUDENTS_CHANDED_NOTIFICATION object:nil];
 }

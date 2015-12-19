@@ -21,6 +21,7 @@ typedef enum : NSUInteger
     directionSettingsType,
     studentLogoutSettingsType,
     teacherLogoutSettingsType,
+    presentTutorialSettingsType
 } SettingsType;
 
 #define SETTINGS_DIRECTION_CHANGE   @"SETTINGS_DIRECTION_CHANGE"

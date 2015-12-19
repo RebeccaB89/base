@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *imagePath;
 @property (nonatomic, strong) NSString *imageName;
+@property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSArray *featureInfos;
 
 @end

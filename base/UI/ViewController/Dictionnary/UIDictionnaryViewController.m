@@ -38,6 +38,15 @@
     [_tableView reloadData];
 }
 
+- (void)notifyWordSelected:(WordInfo *)word
+{
+    if ([self.delegate respondsToSelector:@selector(dictionnaryViewController:didSelectWord:)])
+    {
+        [_delegate dictionnaryViewController:self
+                               didSelectWord:word];
+    }
+}
+
 /* UITableView Delegates */
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,12 +66,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    UIDictionnaryTableViewCell *dictionaryCell = (UIDictionnaryTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    [self notifyWordSelected:dictionaryCell.wordInfo];
 }
 
 /* End UITableView Delegates */
-
-- (IBAction)addNewWordClicked:(UIButton *)sender
-{
-}
 
 @end

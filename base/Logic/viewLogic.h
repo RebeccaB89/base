@@ -12,6 +12,7 @@
 #import "UIStudentChooserViewController.h"
 #import "UIRegisterViewController.h"
 #import "UINewStudentViewController.h"
+#import "UITutorialView.h"
 
 @interface viewLogic : NSObject
 {
@@ -25,6 +26,7 @@
 - (void)presentRegisterModalViewController;
 - (void)presentNewStudentModalViewController;
 - (void)presentMainViewController;
+- (void)presentTutorialView;
 - (UIMagnetBoardViewController *)magnetBoardViewController;
 - (void)presentModalViewController:(UIViewController *)viewController;
 

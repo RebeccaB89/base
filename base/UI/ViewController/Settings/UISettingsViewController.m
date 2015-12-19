@@ -20,7 +20,8 @@
     [super viewDidLoad];
     
     [_tableView registerNib:[UINib nibWithNibName:@"UISettingTableViewCell" bundle:nil] forCellReuseIdentifier:@"UISettingTableViewCell"];
-
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     [self reloadData];
     [self layoutData];
     
@@ -51,6 +52,13 @@
     teacherLogoutSettingInfo.settingsType = teacherLogoutSettingsType;
     
     [_settings addObject:teacherLogoutSettingInfo];
+    
+    SettingsInfo *presentTutorialSettingInfo = [[SettingsInfo alloc] init];
+    
+    presentTutorialSettingInfo.title = [NSString stringWithFormat:NLS(@"Present Tutorial")];
+    presentTutorialSettingInfo.settingsType = presentTutorialSettingsType;
+    
+    [_settings addObject:presentTutorialSettingInfo];
 }
 
 - (void)layoutData
@@ -96,6 +104,12 @@
         case teacherLogoutSettingsType:
             [[UserManager sharedInstance] logoutTeacher];
             break;
+        case presentTutorialSettingsType:
+        {
+            [[viewLogic sharedInstance] presentTutorialView];
+            [self dismissViewControllerAnimated:NO completion:nil ];
+            break;
+        }
             
         default:
             break;

@@ -50,7 +50,12 @@
 {
     if ([self checkInput])
     {
-        [[UserManager sharedInstance] checkUsername:_usernameTextField.text andPAssword:_passwordTextField.text];
+        BOOL goodTeacher = [[UserManager sharedInstance] checkUsername:_usernameTextField.text andPAssword:_passwordTextField.text];
+        if (!goodTeacher)
+        {
+            [[[UIAlertView alloc] initWithTitle:NLS(@"Incorrect user") message:NLS(@"Please enter right password") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+
+        }
     }
 }
 

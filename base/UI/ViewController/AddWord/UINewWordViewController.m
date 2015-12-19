@@ -96,7 +96,7 @@
         {
             subview.width = widthItem;
         }
-        subview.backgroundColor = [UIColor orangeColor];
+        subview.backgroundColor = [UIColor clearColor];
         [_stackView addSubview:subview];
     }
 }
@@ -165,6 +165,7 @@
 {
     _imageView.image = [UIImage imageWithContentsOfFile:imagePath];
     _currentWordInfo.imagePath = imagePath;
+    _currentWordInfo.image = [UIImage imageWithContentsOfFile:imagePath];
     _currentWordInfo.imageName = imageName;
 }
 

@@ -33,20 +33,11 @@ static GrammarLogic *sharedInstance = nil;
 {
     NSMutableArray *regexPermissions = [NSMutableArray array];
     
-    //(AB(C|E)D?)|(ABD?(C|E))
     MouthInfo *mouthRegex = [MouthInfo mouthInfoWithMouthFeatureType:mouthFeatureTypeMB];
     ColorInfo *colorRegex = [ColorInfo colorInfoWithColorFeatureType:colorFeatureTypeBlue];
     VowelInfo *vowelRegex = [VowelInfo vowelInfoWithVowelFeatureType:vowelFeatureTypeVOU];
     SyllableTimeInfo *syllableTimeRegex = [SyllableTimeInfo syllableTimeInfoWithSyllableFeatureType:syllableTimeFeatureTypeLong];
     ThroatInfo *throatRegex = [ThroatInfo throatInfoWithThroatFeatureType:throatFeatureTypeTrembling];
-    
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@", mouthRegex, colorRegex]];
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@%@?", mouthRegex, colorRegex, syllableTimeRegex]];
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@%@?", mouthRegex, colorRegex, throatRegex]];
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@%@?", mouthRegex, colorRegex, vowelRegex]];
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@%@?%@", mouthRegex, colorRegex, throatRegex,vowelRegex]];
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@%@?%@", mouthRegex, colorRegex, throatRegex,syllableTimeRegex]];
-//    [regexPermissions addObject:[NSString stringWithFormat:@"%@%@%@?%@%@", mouthRegex, colorRegex, throatRegex,vowelRegex, syllableTimeRegex]];
     
     [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, mouthRegex] withOptionalFeatures:nil]];
     [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, mouthRegex, syllableTimeRegex] withOptionalFeatures:@[syllableTimeRegex]]];
@@ -56,7 +47,7 @@ static GrammarLogic *sharedInstance = nil;
     [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, mouthRegex, throatRegex,vowelRegex,syllableTimeRegex ] withOptionalFeatures:@[throatRegex]]];
     [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, mouthRegex, throatRegex,syllableTimeRegex ] withOptionalFeatures:@[throatRegex]]];
 
-    
+    [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, mouthRegex, vowelRegex,syllableTimeRegex ] withOptionalFeatures:nil]];
 
     NSString *syllableRegex = [regexPermissions firstObject];
     NSString *wordRegex = [NSString stringWithFormat:@"[%@]*", syllableRegex];
@@ -96,6 +87,10 @@ static GrammarLogic *sharedInstance = nil;
     
     for (FeatureInfo *featureInfo in featuresSorted)
     {
+        if (![featureInfo isKindOfClass:[FeatureInfo class]])
+        {
+            continue;
+        }
         [regex appendString:[featureInfo regex]];
     }
     

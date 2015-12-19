@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     [_tableView registerNib:[UINib nibWithNibName:@"UIFeatureTableViewCell" bundle:nil] forCellReuseIdentifier:@"UIFeatureTableViewCell"];
+     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     [self reloadData];
     [self layoutData];

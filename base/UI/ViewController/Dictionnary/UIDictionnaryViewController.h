@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "DictionnaryManager.h"
 
+@class UIDictionnaryViewController;
+
+@protocol UIDictionnaryViewControllerDelegate <NSObject>
+
+- (void)dictionnaryViewController:(UIDictionnaryViewController *)dictionnaryViewController didSelectWord:(WordInfo *)word;
+
+@end
+
 @interface UIDictionnaryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     __weak IBOutlet UITableView *_tableView;
@@ -20,6 +28,6 @@
     NSArray *_words;
 }
 
-- (IBAction)addNewWordClicked:(UIButton *)sender;
+@property (nonatomic, weak) id<UIDictionnaryViewControllerDelegate> delegate;
 
 @end

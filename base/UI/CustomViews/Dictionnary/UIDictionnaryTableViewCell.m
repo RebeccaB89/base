@@ -95,7 +95,7 @@
     
     _titleLabel.text = _wordInfo.title;
     NSString *s = _wordInfo.imagePath;
-    _imageView.image = [UIImage imageWithContentsOfFile:_wordInfo.imagePath];
+    _imageView.image = _wordInfo.image;// [UIImage imageWithContentsOfFile:_wordInfo.imagePath];
     [self initStackView:_magnetViews];
 }
 

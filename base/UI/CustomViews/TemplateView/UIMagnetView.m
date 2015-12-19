@@ -83,12 +83,7 @@
             subview.hidden = YES;
         }
     }
-    
-//    for (UIView *subToRemove in viewToRemove)
-//    {
-//        //[subToRemove removeFromSuperview];
-//    }
-    
+        
     return magnetView;
 }
 

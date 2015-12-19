@@ -127,6 +127,11 @@
 		B3E0CE921BDE4EE5000D6508 /* DefaultImageChooser in Resources */ = {isa = PBXBuildFile; fileRef = B3E0CE911BDE4EE5000D6508 /* DefaultImageChooser */; };
 		B3E0CE961BDF5FBE000D6508 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CE951BDF5FBE000D6508 /* SettingsManager.m */; };
 		B3E0CEBB1BDFBDC5000D6508 /* UIDirectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E0CEBA1BDFBDC5000D6508 /* UIDirectionView.m */; };
+		B3E6C3B21C1EC5B200F12E73 /* UIWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E6C3B11C1EC5B200F12E73 /* UIWordView.m */; };
+		B3E6C3B41C1EC5BA00F12E73 /* UIWordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E6C3B31C1EC5BA00F12E73 /* UIWordView.xib */; };
+		B3EB4EC61C25DD3C00F5914D /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB4EC51C25DD3C00F5914D /* tutorial.png */; settings = {ASSET_TAGS = (); }; };
+		B3EB4EC91C25DD8A00F5914D /* UITutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EB4EC81C25DD8A00F5914D /* UITutorialView.m */; settings = {ASSET_TAGS = (); }; };
+		B3EB4ECB1C25DDA800F5914D /* UITutorialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EB4ECA1C25DDA800F5914D /* UITutorialView.xib */; settings = {ASSET_TAGS = (); }; };
 		B3FBF13F1BEA60EC006DBAA8 /* UISettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FBF13D1BEA60EC006DBAA8 /* UISettingsViewController.m */; };
 		B3FBF1401BEA60EC006DBAA8 /* UISettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FBF13E1BEA60EC006DBAA8 /* UISettingsViewController.xib */; };
 		B3FBF1631BF06EE4006DBAA8 /* UISettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FBF1611BF06EE4006DBAA8 /* UISettingTableViewCell.m */; };
@@ -314,6 +319,13 @@
 		B3E0CE951BDF5FBE000D6508 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		B3E0CEB91BDFBDC5000D6508 /* UIDirectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDirectionView.h; sourceTree = "<group>"; };
 		B3E0CEBA1BDFBDC5000D6508 /* UIDirectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDirectionView.m; sourceTree = "<group>"; };
+		B3E6C3B01C1EC5B200F12E73 /* UIWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWordView.h; sourceTree = "<group>"; };
+		B3E6C3B11C1EC5B200F12E73 /* UIWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWordView.m; sourceTree = "<group>"; };
+		B3E6C3B31C1EC5BA00F12E73 /* UIWordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIWordView.xib; sourceTree = "<group>"; };
+		B3EB4EC51C25DD3C00F5914D /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		B3EB4EC71C25DD8A00F5914D /* UITutorialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITutorialView.h; sourceTree = "<group>"; };
+		B3EB4EC81C25DD8A00F5914D /* UITutorialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITutorialView.m; sourceTree = "<group>"; };
+		B3EB4ECA1C25DDA800F5914D /* UITutorialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITutorialView.xib; sourceTree = "<group>"; };
 		B3FBED301BE89C05006DBAA8 /* TZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackView.swift; sourceTree = "<group>"; };
 		B3FBED311BE89C05006DBAA8 /* TZStackViewAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackViewAlignment.swift; sourceTree = "<group>"; };
 		B3FBED321BE89C05006DBAA8 /* TZStackViewDistribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZStackViewDistribution.swift; sourceTree = "<group>"; };
@@ -358,6 +370,7 @@
 		482AC5E21B15D87600EF2634 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3EB4EC41C25DD2200F5914D /* Tutorial */,
 				B3BF66B31C0456E2001FF8A6 /* Main */,
 				B3E0CE911BDE4EE5000D6508 /* DefaultImageChooser */,
 				B397F9A11BA00E290077C05F /* Throat */,
@@ -540,6 +553,8 @@
 		4889751B1B00932800E63E90 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B3EB4EC31C25DD0C00F5914D /* Tutorial */,
+				B3E6C3AF1C1EC58800F12E73 /* WordView */,
 				B3FBF15F1BF06EBA006DBAA8 /* Settings */,
 				B3E0CEB81BDFBDA5000D6508 /* DirectionView */,
 				B31F36A91BCE5E17004BFBAC /* Dictionnary */,
@@ -892,6 +907,34 @@
 			path = DirectionView;
 			sourceTree = "<group>";
 		};
+		B3E6C3AF1C1EC58800F12E73 /* WordView */ = {
+			isa = PBXGroup;
+			children = (
+				B3E6C3B01C1EC5B200F12E73 /* UIWordView.h */,
+				B3E6C3B11C1EC5B200F12E73 /* UIWordView.m */,
+				B3E6C3B31C1EC5BA00F12E73 /* UIWordView.xib */,
+			);
+			path = WordView;
+			sourceTree = "<group>";
+		};
+		B3EB4EC31C25DD0C00F5914D /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB4EC71C25DD8A00F5914D /* UITutorialView.h */,
+				B3EB4EC81C25DD8A00F5914D /* UITutorialView.m */,
+				B3EB4ECA1C25DDA800F5914D /* UITutorialView.xib */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		B3EB4EC41C25DD2200F5914D /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB4EC51C25DD3C00F5914D /* tutorial.png */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		B3FBED2E1BE89C05006DBAA8 /* TZStackView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1019,6 +1062,7 @@
 				B38277241B5BCE5A0054DB9F /* Mouth-07.png in Resources */,
 				4815A5981B0B179D00DF8C80 /* UIFeatureTableViewCell.xib in Resources */,
 				B3BF66B51C045768001FF8A6 /* close_red.png in Resources */,
+				B3E6C3B41C1EC5BA00F12E73 /* UIWordView.xib in Resources */,
 				488A73F31B15E3C90047876F /* Colors-02.png in Resources */,
 				488A73FD1B15E3C90047876F /* Colors-12.png in Resources */,
 				4882D4AC1B0A261C004786A3 /* UIFeatureViewController.xib in Resources */,
@@ -1044,9 +1088,11 @@
 				B382771E1B5BCE550054DB9F /* Mouth-01.png in Resources */,
 				B397F9A31BA00E420077C05F /* Throat.png in Resources */,
 				4882D4A01B09DE48004786A3 /* UITopMenuView.xib in Resources */,
+				B3EB4ECB1C25DDA800F5914D /* UITutorialView.xib in Resources */,
 				B31F36A81BCE5DD2004BFBAC /* UIDictionnaryViewController.xib in Resources */,
 				B382772C1B5BCE5A0054DB9F /* Mouth-04@2x.png in Resources */,
 				B38277271B5BCE5A0054DB9F /* Mouth-02@2x.png in Resources */,
+				B3EB4EC61C25DD3C00F5914D /* tutorial.png in Resources */,
 				B38277341B5BCE5A0054DB9F /* Mouth-17@2x.png in Resources */,
 				B38277281B5BCE5A0054DB9F /* Mouth-03@2x.png in Resources */,
 				B382772E1B5BCE5A0054DB9F /* Mouth-17.png in Resources */,
@@ -1105,6 +1151,7 @@
 				B3FBF13F1BEA60EC006DBAA8 /* UISettingsViewController.m in Sources */,
 				B397F9901B9F03A90077C05F /* ThroatInfo.m in Sources */,
 				B32849281BD7D24900A945C2 /* BaseSerializeData.m in Sources */,
+				B3E6C3B21C1EC5B200F12E73 /* UIWordView.m in Sources */,
 				B3FBF1631BF06EE4006DBAA8 /* UISettingTableViewCell.m in Sources */,
 				B38277381B5BD56F0054DB9F /* ColorInfo.m in Sources */,
 				4815A5971B0B179D00DF8C80 /* UIFeatureTableViewCell.m in Sources */,
@@ -1112,6 +1159,7 @@
 				B3E0CE961BDF5FBE000D6508 /* SettingsManager.m in Sources */,
 				B3C7C1D01C061027006C87EB /* OHStackView.m in Sources */,
 				B38DC2F01BDD2F640094D9C0 /* UIImageChooserViewController.m in Sources */,
+				B3EB4EC91C25DD8A00F5914D /* UITutorialView.m in Sources */,
 				B397F98A1B9F024D0077C05F /* VowelInfo.m in Sources */,
 				B31F36B51BCE5F43004BFBAC /* WordInfo.m in Sources */,
 				B38DC2EA1BDD0C8F0094D9C0 /* UINewWordViewController.m in Sources */,

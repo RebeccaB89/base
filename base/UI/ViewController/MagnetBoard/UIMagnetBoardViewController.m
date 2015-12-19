@@ -19,6 +19,7 @@
 #import "UIDirectionView.h"
 #import "UISettingsViewController.h"
 #import "SettingsManager.h"
+#import "GrammarLogic.h"
 
 #define Direction_view_tag 65631
 
@@ -32,25 +33,11 @@
 {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view from its nib.
-//    UIZoomableView *zoomableView = [[UIZoomableView alloc] initWithFrame:CGRectMake(self.view.centerX, self.view.centerY, 200, 200)];
-//    zoomableView.backgroundColor = [UIColor purpleColor];
-//    [self.view addSubview:zoomableView];
-//    
-//    UIDraggableView *draggableView = [[UIDraggableView alloc] initWithFrame:CGRectMake(self.view.centerY, self.view.centerX, 200, 200)];
-//    draggableView.backgroundColor = [UIColor yellowColor];
-//    [self.view addSubview:draggableView];
-//    
-//    UIZoomableDraggableView *zoomableDraggableView = [[UIZoomableDraggableView alloc] initWithFrame:CGRectMake(100, 150, 200, 200)];
-//    zoomableDraggableView.backgroundColor = [UIColor blueColor];
-//    [self.view addSubview:zoomableDraggableView];
-    
     [self layoutTopMenu];
     [self addTapGesture];
     [self layoutDirectionView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutDirectionView) name:SETTINGS_DIRECTION_CHANGE object:nil];
-    
 }
 
 - (void)layoutDirectionView
@@ -99,11 +86,11 @@
     [self updateViewArchitecture];
 }
 
-- (NSUInteger) supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     //Because your app is only landscape, your view controller for the view in your
     // popover needs to support only landscape
-    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (void)layoutTopMenu
@@ -185,6 +172,18 @@
         }
         UIMagnetView *magnetView = [UIMagnetView magnetViewForSuperView:self.view removeFromSuperView:YES inPoint:sender.view.origin];
         
+        NSString *magnetViewRegex = [[GrammarLogic sharedInstance] regexForFeatureInfos:magnetView.featureInfos];
+        BOOL isPermission = [[GrammarLogic sharedInstance] wordHavePermission:magnetViewRegex];
+        
+        if (!isPermission)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NLS(@"No permission") message:NLS(@"Sorry, this template is not good") delegate:nil cancelButtonTitle:NLS(@"OK") otherButtonTitles: nil];
+            [alert show];
+            
+            [UIMagnetView breakMagnetView:(UIMagnetView *)magnetView];
+            [self updateViewArchitecture];
+        }
+        
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidTapClicked:)];
         tapGesture.numberOfTapsRequired = 2;
         [magnetView addGestureRecognizer:tapGesture];
@@ -241,6 +240,7 @@
 {
     UIDictionnaryViewController *dictionnaryController = [UIDictionnaryViewController loadFromNib];
     
+    dictionnaryController.delegate = self;
     _popover = [[UIPopoverController alloc] initWithContentViewController:dictionnaryController];
     _popover.delegate = self;
     [_popover presentPopoverFromBarButtonItem:item permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
@@ -354,7 +354,28 @@
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
     _chosenTemplateView = nil;
+    _wordChoosenView = nil;
 }
 /* End UIPopoverController Delegates */
+
+/* UIDictionnaryViewController Delegates */
+
+- (void)dictionnaryViewController:(UIDictionnaryViewController *)dictionnaryViewController didSelectWord:(WordInfo *)word
+{
+    [_wordChoosenView removeFromSuperview];
+    _wordChoosenView = [UIWordView loadFromNib];
+    _wordChoosenView.centerX = self.view.centerX;
+    _wordChoosenView.centerY = self.view.centerY;
+    
+    _wordChoosenView.backgroundColor = [UIColor clearColor];
+    _wordChoosenView.wordInfo = word;
+    
+    [self.view addSubview:_wordChoosenView];
+    [self.view sendSubviewToBack:_wordChoosenView];
+    [self updateViewArchitecture];
+}
+
+/* End UIDictionnaryViewController Delegates */
+
 
 @end

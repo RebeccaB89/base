@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIDictionnaryViewController">
             <connections>
-                <outlet property="_addNewWordButton" destination="8mP-Ht-Z97" id="xec-gR-FRI"/>
                 <outlet property="_searchBar" destination="ZJH-uH-7Ak" id="tpe-ZK-nrP"/>
                 <outlet property="_tableView" destination="Mkp-Rc-vbv" id="Uwh-tr-9qJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6JU-de-EMy" userLabel="Header View">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                    <rect key="frame" x="0.0" y="-46" width="600" height="44"/>
                     <subviews>
                         <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-uH-7Ak">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -27,33 +26,17 @@
                             </constraints>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mP-Ht-Z97">
-                            <rect key="frame" x="0.0" y="44" width="600" height="36"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <state key="normal" title="Add new word">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="addNewWordClicked:" destination="-1" eventType="touchUpInside" id="bVz-uf-MXS"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="324-Mw-ciR"/>
-                        <constraint firstItem="8mP-Ht-Z97" firstAttribute="leading" secondItem="6JU-de-EMy" secondAttribute="leading" id="6Ev-zj-MXL"/>
-                        <constraint firstAttribute="trailing" secondItem="8mP-Ht-Z97" secondAttribute="trailing" id="81C-qM-F2d"/>
+                        <constraint firstAttribute="height" constant="44" id="324-Mw-ciR"/>
                         <constraint firstItem="ZJH-uH-7Ak" firstAttribute="top" secondItem="6JU-de-EMy" secondAttribute="top" id="E0a-wp-8j1"/>
-                        <constraint firstItem="8mP-Ht-Z97" firstAttribute="top" secondItem="ZJH-uH-7Ak" secondAttribute="bottom" id="ILP-hz-Y2V"/>
                         <constraint firstAttribute="trailing" secondItem="ZJH-uH-7Ak" secondAttribute="trailing" id="Ud8-nz-WCk"/>
-                        <constraint firstAttribute="bottom" secondItem="8mP-Ht-Z97" secondAttribute="bottom" id="XqX-yf-DTc"/>
-                        <constraint firstItem="8mP-Ht-Z97" firstAttribute="top" secondItem="ZJH-uH-7Ak" secondAttribute="bottom" id="dgo-v9-UGS"/>
                         <constraint firstItem="ZJH-uH-7Ak" firstAttribute="leading" secondItem="6JU-de-EMy" secondAttribute="leading" id="nrQ-Tt-ecN"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mkp-Rc-vbv">
-                    <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                    <rect key="frame" x="0.0" y="-2" width="600" height="602"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="nuL-va-HEN"/>
@@ -63,7 +46,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="6JU-de-EMy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9py-3X-ekm"/>
+                <constraint firstItem="6JU-de-EMy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-46" id="9py-3X-ekm"/>
                 <constraint firstItem="Mkp-Rc-vbv" firstAttribute="top" secondItem="6JU-de-EMy" secondAttribute="bottom" id="L7d-Qe-RvC"/>
                 <constraint firstItem="Mkp-Rc-vbv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OLE-J5-hlE"/>
                 <constraint firstItem="Mkp-Rc-vbv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S8A-7r-cUN"/>

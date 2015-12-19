@@ -52,6 +52,9 @@ static viewLogic *sharedInstance = nil;
 
 - (void)presentViewAccordingToUserStatus
 {
+//    [self presentMainViewController];
+//
+//    return;
     if ([[UserManager sharedInstance] teacherLogedIn])
     {
         if ([[UserManager sharedInstance] studentLogedIn])
@@ -73,6 +76,31 @@ static viewLogic *sharedInstance = nil;
 {
     _magnetBoardViewController = [UIMagnetBoardViewController loadFromNib];
     [self presentViewController:_magnetBoardViewController animated:NO onWindow:YES completion:nil];
+    
+    [self presentTutorialIfNeeded];
+}
+
+- (void)presentTutorialIfNeeded
+{
+    BOOL presentTutorial = [Shared readBool:@"tutorial" default:YES];
+    if (presentTutorial)
+    {
+        [self presentTutorialView];
+        //[Shared writeBool:NO key:@"tutorial"];
+    }
+}
+
+- (void)presentTutorialView
+{
+    UITutorialView *tutorialView = (UITutorialView *)[_magnetBoardViewController.view viewWithTag:2332];
+    if (!tutorialView)
+    {
+        tutorialView = [UITutorialView loadFromNib];
+        tutorialView.frame = _magnetBoardViewController.view.bounds;
+        tutorialView.tag = 2332;
+    }
+    
+    [_magnetBoardViewController.view addSubview:tutorialView];
 }
 
 - (void)presentLoginViewController
