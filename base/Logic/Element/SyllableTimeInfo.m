@@ -48,10 +48,10 @@
     switch (syllableTimeFeatureType)
     {
         case syllableTimeFeatureTypeLong:
-            return @"Sparkle";
+            return @"Snake";
             
         case syllableTimeFeatureTypeShort:
-            return @"Snake";
+            return @"Sparkle";
             
         default:
             return @"";

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UINewStudentViewController">
@@ -18,11 +19,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-3O-xE5" userLabel="cancel Button">
-                    <rect key="frame" x="495" y="30" width="75" height="42"/>
+                    <rect key="frame" x="496" y="30" width="74" height="42"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" title="Button">
-                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted">
@@ -32,7 +33,7 @@
                         <action selector="cancelClicked:" destination="-1" eventType="touchUpInside" id="X7y-tY-NsJ"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-Rd-Kjm" userLabel="Username text field">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-Rd-Kjm" userLabel="Username text field">
                     <rect key="frame" x="240" y="285" width="120" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="t1l-9b-Tv9"/>
@@ -40,12 +41,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEc-tf-jta" userLabel="add Button">
-                    <rect key="frame" x="263" y="365" width="75" height="42"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEc-tf-jta" userLabel="add Button">
+                    <rect key="frame" x="264" y="345" width="74" height="42"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" title="Button">
-                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted">
@@ -62,7 +63,7 @@
                 <constraint firstAttribute="centerY" secondItem="7Vh-Rd-Kjm" secondAttribute="centerY" id="I5g-kp-VtV"/>
                 <constraint firstItem="DTc-3O-xE5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="NTL-Ko-PVI"/>
                 <constraint firstAttribute="trailing" secondItem="DTc-3O-xE5" secondAttribute="trailing" constant="30" id="ZNT-xJ-nUy"/>
-                <constraint firstItem="GEc-tf-jta" firstAttribute="top" secondItem="7Vh-Rd-Kjm" secondAttribute="bottom" constant="50" id="mPa-AX-Edj"/>
+                <constraint firstItem="GEc-tf-jta" firstAttribute="top" secondItem="7Vh-Rd-Kjm" secondAttribute="bottom" constant="30" id="mPa-AX-Edj"/>
                 <constraint firstAttribute="centerX" secondItem="7Vh-Rd-Kjm" secondAttribute="centerX" id="pXb-5K-Nqw"/>
                 <constraint firstItem="7Vh-Rd-Kjm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="q3x-sK-Np9"/>
             </constraints>

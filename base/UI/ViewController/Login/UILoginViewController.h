@@ -17,6 +17,9 @@
     __weak IBOutlet UIButton *_loginButton;
     
     __weak IBOutlet UIButton *_registerButton;
+    
+    __weak IBOutlet NSLayoutConstraint *_loginViewYCenterConstraint;
+    
 }
 
 

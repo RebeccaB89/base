@@ -35,6 +35,9 @@
 #define CELL_TOP_BOTTOM_AUTORESIZINGMASK UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight
 /* End */
 
+#define USER_INTERFACE_IDIOM_IS_IPAD ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+#define USER_INTERFACE_IDIOM_IS_IPHONE ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+
 #define feature_flag_native_games  @"feature_flag_native_games"
 #define feature_flag_favorites  @"feature_flag_favorites"
 @interface Shared : NSObject

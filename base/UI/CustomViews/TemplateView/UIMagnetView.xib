@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8191"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -17,35 +18,35 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx9-tS-kZJ" userLabel="main View">
-                    <rect key="frame" x="42" y="42" width="167" height="167"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="41.5" y="41.5" width="167" height="167"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iuy-AN-INX" userLabel="Throat View">
-                    <rect key="frame" x="42" y="42" width="167" height="167"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="41.5" y="41.5" width="167" height="167"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-SR-B1C" userLabel="vowel View">
-                    <rect key="frame" x="42" y="42" width="167" height="167"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="41.5" y="41.5" width="167" height="167"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnh-6h-vpq" userLabel="Accesory View">
-                    <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
+                    <color key="backgroundColor" red="1" green="0.76458463450000003" blue="0.65974294160000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="tnh-6h-vpq" secondAttribute="height" multiplier="1:1" id="caz-2o-4wz"/>
                     </constraints>
                 </view>
                 <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MQ-RA-x5m" userLabel="Sound View">
-                    <rect key="frame" x="83" y="166" width="84" height="84"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="83" y="166.5" width="84" height="83.5"/>
+                    <color key="backgroundColor" red="0.14117647059999999" green="0.31372549020000001" blue="0.58431372550000005" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="0MQ-RA-x5m" secondAttribute="height" multiplier="1:1" id="tbQ-LI-mt2"/>
                     </constraints>
                 </view>
                 <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A6-ov-OXd" userLabel="Color View">
-                    <rect key="frame" x="166" y="0.0" width="84" height="84"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="166.5" y="0.0" width="83.5" height="83.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="6A6-ov-OXd" secondAttribute="height" multiplier="1:1" id="k0g-kX-Lva"/>
                     </constraints>
@@ -53,7 +54,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="tnh-6h-vpq" firstAttribute="width" secondItem="xx9-tS-kZJ" secondAttribute="width" multiplier="0.5" id="2wZ-rj-RVC"/>
+                <constraint firstItem="tnh-6h-vpq" firstAttribute="width" secondItem="xx9-tS-kZJ" secondAttribute="height" multiplier="0.5" id="2wZ-rj-RVC"/>
                 <constraint firstItem="xx9-tS-kZJ" firstAttribute="height" secondItem="Oca-SR-B1C" secondAttribute="height" id="2xV-nJ-2z3"/>
                 <constraint firstItem="Vnb-eH-xQO" firstAttribute="height" secondItem="xx9-tS-kZJ" secondAttribute="height" multiplier="1.5" id="4Mf-Eb-Ly6"/>
                 <constraint firstAttribute="centerX" secondItem="Oca-SR-B1C" secondAttribute="centerX" id="51M-yW-pUM"/>
@@ -93,9 +94,4 @@
             <point key="canvasLocation" x="220.5" y="209"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

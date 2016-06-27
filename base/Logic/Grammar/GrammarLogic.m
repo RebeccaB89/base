@@ -49,6 +49,10 @@ static GrammarLogic *sharedInstance = nil;
 
     [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, mouthRegex, vowelRegex,syllableTimeRegex ] withOptionalFeatures:nil]];
 
+    [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, vowelRegex,syllableTimeRegex ] withOptionalFeatures:nil]];
+
+    [regexPermissions addObject:[self regexForFeatureInfos:@[colorRegex, vowelRegex,syllableTimeRegex, throatRegex ] withOptionalFeatures:@[throatRegex]]];
+
     NSString *syllableRegex = [regexPermissions firstObject];
     NSString *wordRegex = [NSString stringWithFormat:@"[%@]*", syllableRegex];
     

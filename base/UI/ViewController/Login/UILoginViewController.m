@@ -23,6 +23,21 @@
     
     _registerButton.layer.cornerRadius = 10.0f;
     [_registerButton setTitle:NLS(@"Register") forState:UIControlStateNormal];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onKeyboardWillChangeFrameNotification:)
+                                                 name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onKeyboardWillHideNotification:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)checkInput
@@ -63,5 +78,61 @@
 {
     [[viewLogic sharedInstance] presentRegisterModalViewController];
 }
+
+- (void)onKeyboardWillChangeFrameNotification:(NSNotification *)sender
+{
+    BOOL needAnimateView = NO;
+    CGRect keyboardFrame = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    UIViewAnimationCurve animationCurve = [sender.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
+    float animationTime = [sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    
+    float keyboardHeight = MIN(keyboardFrame.size.width, keyboardFrame.size.height);
+    
+    if (USER_INTERFACE_IDIOM_IS_IPHONE)
+    {
+        needAnimateView = YES;
+        
+        _loginViewYCenterConstraint.constant = - (keyboardHeight / 2.0);
+    }
+    else
+    {
+        if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+        {
+            needAnimateView = YES;
+            
+            _loginViewYCenterConstraint.constant = - (keyboardHeight / 2.0);
+        }
+    }
+    
+    if (needAnimateView)
+    {
+        [UIView animateWithDuration:animationTime
+                              delay:0.0
+                            options:animationCurve
+                         animations:^{
+                             
+                             [self.view layoutIfNeeded];
+                         }
+                         completion:nil];
+    }
+}
+
+- (void)onKeyboardWillHideNotification:(NSNotification *)sender
+{
+    UIViewAnimationCurve animationCurve = [sender.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
+    float animationTime = [sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    
+    _loginViewYCenterConstraint.constant = 0.0f;
+    
+    [UIView animateWithDuration:animationTime
+                          delay:0.0
+                        options:animationCurve
+                     animations:^{
+                         
+                         [self.view layoutIfNeeded];
+                     }
+                     completion:nil];
+}
+
 
 @end

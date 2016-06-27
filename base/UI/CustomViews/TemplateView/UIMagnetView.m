@@ -338,21 +338,65 @@
     {
         _mainView.layer.borderWidth = 3.0;
         _mainView.layer.borderColor = [UIColor blackColor].CGColor;
+        
+        _throatView.layer.borderWidth = 3.0;
+        _throatView.layer.borderColor = [UIColor blackColor].CGColor;
+        
+        _vowelView.layer.borderWidth = 3.0;
+        _vowelView.layer.borderColor = [UIColor blackColor].CGColor;
+        
+        _accesoryView.layer.borderWidth = 3.0;
+        _accesoryView.layer.borderColor = [UIColor blackColor].CGColor;
+        
+        _colorView.layer.borderWidth = 3.0;
+        _colorView.layer.borderColor = [UIColor blackColor].CGColor;
+        
+        _soundView.layer.borderWidth = 3.0;
+        _soundView.layer.borderColor = [UIColor blackColor].CGColor;
     }
     else
     {
         _mainView.layer.borderWidth = 0.0;
         _mainView.layer.borderColor = [UIColor clearColor].CGColor;
         _mainView.layer.cornerRadius = 00.0;
+        
+        _throatView.layer.borderWidth = 0.0;
+        _throatView.layer.borderColor = [UIColor clearColor].CGColor;
+        _vowelView.layer.cornerRadius = 00.0;
+        
+        _vowelView.layer.borderWidth = 0.0;
+        _vowelView.layer.borderColor = [UIColor clearColor].CGColor;
+        _vowelView.layer.cornerRadius = 00.0;
+        
+        _accesoryView.layer.borderWidth = 0.0;
+        _accesoryView.layer.borderColor = [UIColor clearColor].CGColor;
+        _accesoryView.layer.cornerRadius = 00.0;
+        
+        _colorView.layer.borderWidth = 0.0;
+        _colorView.layer.borderColor = [UIColor clearColor].CGColor;
+        _colorView.layer.cornerRadius = 00.0;
+        
+        _soundView.layer.borderWidth = 0.0;
+        _soundView.layer.borderColor = [UIColor clearColor].CGColor;
+        _soundView.layer.cornerRadius = 00.0;
     }
+    
     if (_isSelected)
     {
         _mainView.layer.borderColor = [UIColor blueColor].CGColor;
-
+        _throatView.layer.borderColor = [UIColor blueColor].CGColor;
+        _vowelView.layer.borderColor = [UIColor blueColor].CGColor;
+        _accesoryView.layer.borderColor = [UIColor blueColor].CGColor;
+        _colorView.layer.borderColor = [UIColor blueColor].CGColor;
+        _soundView.layer.borderColor = [UIColor blueColor].CGColor;
     }
     else
     {
         _mainView.layer.borderColor = [UIColor blackColor].CGColor;
+        _vowelView.layer.borderColor = [UIColor blackColor].CGColor;
+        _accesoryView.layer.borderColor = [UIColor blackColor].CGColor;
+        _colorView.layer.borderColor = [UIColor blackColor].CGColor;
+        _soundView.layer.borderColor = [UIColor blackColor].CGColor;
     }
 }
 

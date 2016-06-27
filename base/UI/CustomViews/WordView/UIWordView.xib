@@ -13,7 +13,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-fh-Kmk" userLabel="templates Place holder">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nct-YD-ova">
                     <rect key="frame" x="260" y="10" width="30" height="30"/>
@@ -30,7 +30,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="cQe-fh-Kmk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BA5-dg-CHr"/>
                 <constraint firstAttribute="bottom" secondItem="cQe-fh-Kmk" secondAttribute="bottom" id="FQB-9b-Rye"/>

@@ -85,6 +85,7 @@
         [magnetView setFeatureInfos:features];
         magnetView.userInteractionEnabled = NO;
         magnetView.selectionDisplay = NO;
+
         [_magnetViews addObject:magnetView];
     }
 }
